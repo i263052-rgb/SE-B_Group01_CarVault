@@ -1,49 +1,24 @@
 'use strict';
 
 /**
- * Generates a clean SVG placeholder car image data URI.
- * Replace the `image` property in OFFER_VEHICLES with local `../images/...` paths when ready.
+ * Generates an inline SVG fallback data URI if an external photo fails to load.
  */
-function buildPlaceholderCarImage({ label, accentColor, bodyColor, type }) {
-  let silhouette = '';
-
-  if (type === 'suv') {
-    silhouette = `
-      <path d="M92 178 L112 126 Q122 108 148 106 L278 106 Q306 106 326 130 L388 138 Q412 142 416 164 L416 182 L92 182 Z" fill="${bodyColor}" stroke="#e2e8f0" stroke-width="2.5"/>
-      <path d="M138 116 L206 116 L206 142 L118 142 Z" fill="#1e293b"/>
-      <path d="M218 116 L284 116 L312 142 L218 142 Z" fill="#1e293b"/>
-    `;
-  } else if (type === 'coupe') {
-    silhouette = `
-      <path d="M84 180 L114 146 Q160 110 226 110 L272 110 Q320 112 356 140 L414 150 Q426 156 422 180 Z" fill="${bodyColor}" stroke="#e2e8f0" stroke-width="2.5"/>
-      <path d="M168 120 L258 120 Q296 122 324 142 L154 142 Z" fill="#1e293b"/>
-    `;
-  } else {
-    silhouette = `
-      <path d="M84 180 L106 142 Q132 112 182 110 L276 110 Q314 112 344 138 L412 146 Q424 154 420 180 Z" fill="${bodyColor}" stroke="#e2e8f0" stroke-width="2.5"/>
-      <path d="M148 120 L214 120 L214 142 L126 142 Z" fill="#1e293b"/>
-      <path d="M226 120 L282 120 L318 142 L226 142 Z" fill="#1e293b"/>
-    `;
-  }
-
+function buildFallbackCarImage(label) {
   const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-label="${label}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="${label}">
       <defs>
-        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#0f172a"/>
-          <stop offset="100%" stop-color="#1e293b"/>
+        <linearGradient id="cvbg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#091715"/>
+          <stop offset="100%" stop-color="#20352f"/>
         </linearGradient>
       </defs>
-      <rect width="500" height="300" fill="url(#bg)"/>
-      <circle cx="390" cy="60" r="110" fill="${accentColor}" opacity="0.14"/>
-      <ellipse cx="252" cy="196" rx="176" ry="12" fill="#020617" opacity="0.7"/>
-      ${silhouette}
-      <circle cx="152" cy="182" r="24" fill="#0f172a" stroke="#cbd5e1" stroke-width="5"/>
-      <circle cx="152" cy="182" r="9" fill="${accentColor}"/>
-      <circle cx="356" cy="182" r="24" fill="#0f172a" stroke="#cbd5e1" stroke-width="5"/>
-      <circle cx="356" cy="182" r="9" fill="${accentColor}"/>
-      <text x="28" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="18" font-weight="700">${label}</text>
-      <text x="28" y="276" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">CarVault Fleet Sample Image (Replace with local images/ file)</text>
+      <rect width="900" height="540" fill="url(#cvbg)"/>
+      <circle cx="720" cy="110" r="160" fill="#c9a66b" opacity="0.12"/>
+      <path d="M180 340 L240 250 Q285 200 375 198 L545 198 Q620 202 675 254 L760 272 Q780 286 774 340 Z" fill="#102521" stroke="#c9a66b" stroke-width="4"/>
+      <circle cx="305" cy="342" r="44" fill="#091715" stroke="#c9a66b" stroke-width="6"/>
+      <circle cx="620" cy="342" r="44" fill="#091715" stroke="#c9a66b" stroke-width="6"/>
+      <text x="56" y="455" fill="#f3eee5" font-family="Manrope, sans-serif" font-size="30" font-weight="800">${label}</text>
+      <text x="56" y="490" fill="#b5bdb7" font-family="DM Sans, sans-serif" font-size="18">CarVault Royal Emerald Collection</text>
     </svg>
   `.trim();
 
@@ -51,8 +26,7 @@ function buildPlaceholderCarImage({ label, accentColor, bodyColor, type }) {
 }
 
 /**
- * Special vehicle offers data array.
- * Each offer can later point `image` to a local file such as `../images/bmw-530i.jpg`.
+ * Special vehicle offers data array with curated Unsplash car photography.
  */
 const OFFER_VEHICLES = [
   {
@@ -62,13 +36,10 @@ const OFFER_VEHICLES = [
     dailyPrice: 140,
     discountPercent: 15,
     promoCode: 'VAULT15',
-    image: buildPlaceholderCarImage({
-      label: '2026 BMW 530i M Sport',
-      accentColor: '#3b82f6',
-      bodyColor: '#334155',
-      type: 'sedan',
-    }),
-    alt: '2026 BMW 530i M Sport executive sedan parked in studio lighting',
+    image:
+      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=85',
+    fallbackImage: buildFallbackCarImage('2026 BMW 530i M Sport'),
+    alt: '2026 BMW 530i M Sport executive sedan on open road',
     specs: ['Automatic', '5 Seats', 'Hybrid Petrol', 'Unlimited Mileage'],
     summary:
       'Refined business-class comfort with adaptive suspension, wireless cockpit integration, and 15% seasonal fleet savings.',
@@ -87,13 +58,10 @@ const OFFER_VEHICLES = [
     dailyPrice: 160,
     discountPercent: 10,
     promoCode: 'STUDENT10',
-    image: buildPlaceholderCarImage({
-      label: '2026 Audi Q7 Quattro',
-      accentColor: '#10b981',
-      bodyColor: '#475569',
-      type: 'suv',
-    }),
-    alt: '2026 Audi Q7 Quattro seven-seat luxury SUV side profile',
+    image:
+      'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=85',
+    fallbackImage: buildFallbackCarImage('2026 Audi Q7 Quattro'),
+    alt: '2026 Audi Q7 Quattro luxury SUV in studio lighting',
     specs: ['All-Wheel Drive', '7 Seats', 'Panoramic Roof', 'GPS Included'],
     summary:
       'Spacious three-row luxury SUV built for family road trips and campus travel, offered at 10% off the standard daily rate.',
@@ -112,13 +80,10 @@ const OFFER_VEHICLES = [
     dailyPrice: 250,
     discountPercent: 20,
     promoCode: 'WEEKEND20',
-    image: buildPlaceholderCarImage({
-      label: '2026 Porsche 911 Carrera',
-      accentColor: '#f59e0b',
-      bodyColor: '#1e293b',
-      type: 'coupe',
-    }),
-    alt: '2026 Porsche 911 Carrera performance coupe in obsidian finish',
+    image:
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85',
+    fallbackImage: buildFallbackCarImage('2026 Porsche 911 Carrera'),
+    alt: '2026 Porsche 911 Carrera sports coupe parked outdoors',
     specs: ['8-Speed PDK', '2+2 Seats', 'Twin-Turbo Flat-6', 'Sport Chrono'],
     summary:
       'Signature grand touring performance with crisp handling and 20% weekend escape savings on multi-day bookings.',
@@ -132,9 +97,6 @@ const OFFER_VEHICLES = [
   },
 ];
 
-/**
- * Valid promo codes supported by the Discount Code Box.
- */
 const PROMO_CODES = {
   VAULT15: {
     discount: 15,
@@ -152,9 +114,6 @@ const PROMO_CODES = {
 
 const PROMO_STORAGE_KEY = 'carvault_active_promo';
 
-/**
- * Formats a numeric value as USD currency.
- */
 function formatCurrency(amount) {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -164,16 +123,10 @@ function formatCurrency(amount) {
   }).format(amount);
 }
 
-/**
- * Computes discounted daily price from base price and discount percentage.
- */
 function calculateDiscountedPrice(price, discountPercent) {
   return price * (1 - discountPercent / 100);
 }
 
-/**
- * Escapes HTML special characters before inserting dynamic text into templates.
- */
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = String(text);
@@ -181,7 +134,32 @@ function escapeHtml(text) {
 }
 
 /**
- * Renders the 3 Special Vehicle Offer cards into #offers-grid.
+ * Attaches a safe one-time fallback image handler when an external URL fails.
+ */
+function attachImageFallback(imgElement, fallbackSrc) {
+  if (!imgElement || !fallbackSrc) return;
+  imgElement.onerror = function handleImgError() {
+    this.onerror = null;
+    this.src = fallbackSrc;
+  };
+}
+
+/**
+ * Mobile menu toggle using .navlinks.open and .menu-toggle.
+ */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (!toggleBtn || !navLinks) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
+/**
+ * Renders the 3 Special Vehicle Offer cards into #offers-grid using .card structure.
  */
 function renderOfferCards(onViewOffer) {
   const grid = document.getElementById('offers-grid');
@@ -189,48 +167,45 @@ function renderOfferCards(onViewOffer) {
 
   grid.innerHTML = OFFER_VEHICLES.map((offer) => {
     const discountedPrice = calculateDiscountedPrice(offer.dailyPrice, offer.discountPercent);
-    const specsMarkup = offer.specs
-      .map((spec) => `<span class="offer-spec-chip">${escapeHtml(spec)}</span>`)
-      .join('');
+    const specsLine = offer.specs.join(' · ');
 
     return `
-      <div class="col-12 col-lg-4">
-        <article class="offer-card" data-offer-id="${escapeHtml(offer.id)}">
-          <div class="offer-card-media">
-            <img
-              src="${offer.image}"
-              alt="${escapeHtml(offer.alt)}"
-              class="offer-card-img"
-              loading="lazy"
-            />
-            <span class="offer-discount-badge" aria-label="${offer.discountPercent}% discount">
-              -${offer.discountPercent}%
-            </span>
-          </div>
-          <div class="p-4 d-flex flex-column flex-grow-1">
-            <span class="offer-category-tag">${escapeHtml(offer.category)}</span>
-            <h3 class="offer-card-title">${escapeHtml(offer.name)}</h3>
-            <p class="text-secondary small mb-3">${escapeHtml(offer.summary)}</p>
-            <div class="offer-specs-list">${specsMarkup}</div>
-            <div class="offer-price-row">
-              <div>
-                <span class="offer-price-original">${formatCurrency(offer.dailyPrice)}</span>
-                <span class="offer-price-discounted">${formatCurrency(discountedPrice)}</span>
-                <span class="offer-price-unit">/ day</span>
-              </div>
-              <button
-                type="button"
-                class="btn btn-carvault btn-sm px-3 js-view-offer"
-                data-offer-id="${escapeHtml(offer.id)}"
-              >
-                View
-              </button>
+      <article class="card" data-offer-id="${escapeHtml(offer.id)}">
+        <div class="card-image">
+          <img
+            src="${escapeHtml(offer.image)}"
+            alt="${escapeHtml(offer.alt)}"
+            loading="lazy"
+            data-fallback="${escapeHtml(offer.fallbackImage)}"
+          />
+          <span class="pill" aria-label="${offer.discountPercent}% discount">-${offer.discountPercent}%</span>
+        </div>
+        <div class="card-body">
+          <div class="meta">${escapeHtml(offer.category)} · ${escapeHtml(specsLine)}</div>
+          <h3>${escapeHtml(offer.name)}</h3>
+          <p>${escapeHtml(offer.summary)}</p>
+          <div class="card-bottom">
+            <div>
+              <span class="muted" style="text-decoration: line-through; margin-right: 8px; font-size: 13px;">${formatCurrency(offer.dailyPrice)}</span>
+              <span class="price">${formatCurrency(discountedPrice)}</span>
+              <span class="meta">/ day</span>
             </div>
+            <button
+              type="button"
+              class="btn small js-view-offer"
+              data-offer-id="${escapeHtml(offer.id)}"
+            >
+              View
+            </button>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     `;
   }).join('');
+
+  grid.querySelectorAll('img[data-fallback]').forEach((img) => {
+    attachImageFallback(img, img.getAttribute('data-fallback'));
+  });
 
   grid.addEventListener('click', (event) => {
     const viewBtn = event.target.closest('.js-view-offer');
@@ -241,15 +216,14 @@ function renderOfferCards(onViewOffer) {
 }
 
 /**
- * Sets up and populates the Bootstrap 5 Offer Details modal.
+ * Sets up the offer details modal using .panel and .hidden classes.
  */
 function createOfferModalHandler() {
-  const modalElement = document.getElementById('offerDetailsModal');
-  if (!modalElement || typeof bootstrap === 'undefined') {
-    return () => {};
-  }
+  const modalEl = document.getElementById('offerDetailsModal');
+  const closeBtn = document.getElementById('offerModalClose');
+  const dismissBtn = document.getElementById('offerModalDismiss');
+  if (!modalEl) return () => {};
 
-  const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
   const titleEl = document.getElementById('offerModalTitle');
   const categoryEl = document.getElementById('offerModalCategory');
   const badgeEl = document.getElementById('offerModalBadge');
@@ -263,6 +237,26 @@ function createOfferModalHandler() {
   const inclusionsEl = document.getElementById('offerModalInclusions');
   const termsEl = document.getElementById('offerModalTerms');
 
+  function closeModal() {
+    modalEl.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+  dismissBtn?.addEventListener('click', closeModal);
+
+  modalEl.addEventListener('click', (event) => {
+    if (event.target === modalEl) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
   return function openOfferModal(offerId) {
     const offer = OFFER_VEHICLES.find((item) => item.id === offerId);
     if (!offer) return;
@@ -275,22 +269,22 @@ function createOfferModalHandler() {
     badgeEl.textContent = `-${offer.discountPercent}% OFF`;
     imgEl.src = offer.image;
     imgEl.alt = offer.alt;
+    attachImageFallback(imgEl, offer.fallbackImage);
     summaryEl.textContent = offer.summary;
     originalPriceEl.textContent = `${formatCurrency(offer.dailyPrice)} / day`;
     discountedPriceEl.textContent = `${formatCurrency(discountedPrice)} / day`;
     savingsEl.textContent = `Save ${formatCurrency(dailySavings)} per day`;
     codeEl.textContent = offer.promoCode;
+    specsEl.textContent = offer.specs.join(' · ');
     termsEl.textContent = offer.terms;
-
-    specsEl.innerHTML = offer.specs
-      .map((spec) => `<span class="offer-spec-chip">${escapeHtml(spec)}</span>`)
-      .join('');
 
     inclusionsEl.innerHTML = offer.inclusions
       .map((item) => `<li>${escapeHtml(item)}</li>`)
       .join('');
 
-    modalInstance.show();
+    modalEl.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    closeBtn?.focus();
   };
 }
 
@@ -304,19 +298,17 @@ function initPromoCodeBox() {
   if (!form || !input || !feedbackEl) return;
 
   function renderFeedback(type, message, activeCode = '') {
-    feedbackEl.className = `promo-feedback is-visible ${type === 'success' ? 'is-success' : 'is-error'}`;
+    feedbackEl.className = type === 'success' ? 'notice row' : 'notice error';
     if (type === 'success' && activeCode) {
       feedbackEl.innerHTML = `
         <span>${escapeHtml(message)}</span>
-        <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" id="clear-promo-btn">
-          Remove
-        </button>
+        <button type="button" class="btn ghost small" id="clear-promo-btn">Remove</button>
       `;
       const clearBtn = document.getElementById('clear-promo-btn');
       clearBtn?.addEventListener('click', () => {
         localStorage.removeItem(PROMO_STORAGE_KEY);
         input.value = '';
-        feedbackEl.className = 'promo-feedback';
+        feedbackEl.className = 'notice hidden';
         feedbackEl.innerHTML = '';
         input.focus();
       });
@@ -351,7 +343,6 @@ function initPromoCodeBox() {
     );
   }
 
-  // Restore saved promo code from localStorage if valid
   const savedCode = (localStorage.getItem(PROMO_STORAGE_KEY) || '').trim().toUpperCase();
   if (savedCode && PROMO_CODES[savedCode]) {
     const promo = PROMO_CODES[savedCode];
@@ -380,11 +371,9 @@ function initDiscountCalculator() {
   const feedbackEl = document.getElementById('calc-feedback');
   if (!priceInput || !discountInput || !totalEl || !savingsEl || !feedbackEl) return;
 
-  function setError(message, invalidField) {
+  function setError(message) {
+    feedbackEl.className = 'notice error';
     feedbackEl.textContent = message;
-    feedbackEl.classList.add('is-error');
-    priceInput.classList.toggle('is-invalid', invalidField === 'price' || invalidField === 'both');
-    discountInput.classList.toggle('is-invalid', invalidField === 'discount' || invalidField === 'both');
     totalEl.textContent = formatCurrency(0);
     savingsEl.textContent = `Savings: ${formatCurrency(0)}`;
   }
@@ -393,22 +382,21 @@ function initDiscountCalculator() {
     const rawPrice = priceInput.value.trim();
     const rawDiscount = discountInput.value.trim();
 
-    priceInput.classList.remove('is-invalid');
-    discountInput.classList.remove('is-invalid');
-    feedbackEl.classList.remove('is-error');
-
     if (priceInput.validity?.badInput) {
-      setError('Price must be a valid non-negative amount.', 'price');
+      setError('Price must be a valid non-negative amount.');
       return;
     }
 
     if (discountInput.validity?.badInput) {
-      setError('Discount percentage must be between 0% and 100%.', 'discount');
+      setError('Discount percentage must be between 0% and 100%.');
       return;
     }
 
     if (rawPrice === '' && rawDiscount === '') {
-      feedbackEl.textContent = 'Enter a rental price and discount percentage to see your live total.';
+      feedbackEl.className = 'meta';
+      feedbackEl.style.marginTop = '12px';
+      feedbackEl.textContent =
+        'Enter a rental price and discount percentage to see your live total.';
       totalEl.textContent = formatCurrency(0);
       savingsEl.textContent = `Savings: ${formatCurrency(0)}`;
       return;
@@ -418,6 +406,8 @@ function initDiscountCalculator() {
     const discount = rawDiscount === '' ? 0 : Number(rawDiscount);
 
     if (rawPrice === '') {
+      feedbackEl.className = 'meta';
+      feedbackEl.style.marginTop = '12px';
       feedbackEl.textContent = 'Enter a rental price to calculate your discounted total.';
       totalEl.textContent = formatCurrency(0);
       savingsEl.textContent = `Savings: ${formatCurrency(0)}`;
@@ -425,12 +415,12 @@ function initDiscountCalculator() {
     }
 
     if (!Number.isFinite(price) || price < 0) {
-      setError('Price must be a valid non-negative amount.', 'price');
+      setError('Price must be a valid non-negative amount.');
       return;
     }
 
     if (rawDiscount !== '' && (!Number.isFinite(discount) || discount < 0 || discount > 100)) {
-      setError('Discount percentage must be between 0% and 100%.', 'discount');
+      setError('Discount percentage must be between 0% and 100%.');
       return;
     }
 
@@ -439,6 +429,8 @@ function initDiscountCalculator() {
 
     totalEl.textContent = formatCurrency(finalTotal);
     savingsEl.textContent = `Savings: ${formatCurrency(savings)}`;
+    feedbackEl.className = 'meta';
+    feedbackEl.style.marginTop = '12px';
     feedbackEl.textContent =
       discount > 0
         ? `${discount}% discount applied to ${formatCurrency(price)}.`
@@ -451,6 +443,7 @@ function initDiscountCalculator() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
   const openOfferModal = createOfferModalHandler();
   renderOfferCards(openOfferModal);
   initPromoCodeBox();
