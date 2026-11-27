@@ -1,6 +1,7 @@
+
 /**
  * CarVault — Central Vehicle & Brand Data Store
- * Pure vanilla JS arrays and objects shared across showroom pages.
+ * Shared brand and vehicle information for all showroom pages.
  */
 
 window.CarVaultData = (function () {
@@ -17,7 +18,8 @@ window.CarVaultData = (function () {
       tagline: "Engineering born on the road",
       story:
         "Founded in Stuttgart in 1931, Porsche has built its name on precision and everyday usable performance. The 911 remains the heart of the brand.",
-      url: "porsche.html"
+      heroImage: "../assets/images/porsche/porsche-911-hero.jpg",
+      url: "porsche.html?brand=porsche"
     },
     {
       id: "mercedes-benz",
@@ -29,7 +31,8 @@ window.CarVaultData = (function () {
       tagline: "The best or nothing",
       story:
         "Pioneering luxury and hand-crafted AMG performance since 1926, uniting effortless refinement with track-bred V8 authority.",
-      url: "explore-cars.html?brand=mercedes-benz"
+      heroImage: "../assets/images/mercedes-benz/mercedes-amg-gt.jpg",
+      url: "porsche.html?brand=mercedes-benz"
     },
     {
       id: "bmw",
@@ -41,7 +44,8 @@ window.CarVaultData = (function () {
       tagline: "Sheer driving pleasure",
       story:
         "From precision inline-six dynamics to M Motorsport engineering, BMW builds driver-focused machines tuned for balance and poise.",
-      url: "explore-cars.html?brand=bmw"
+      heroImage: "../assets/images/bmw/bmw-m4-competition.jpg",
+      url: "porsche.html?brand=bmw"
     },
     {
       id: "audi",
@@ -53,7 +57,8 @@ window.CarVaultData = (function () {
       tagline: "Vorsprung durch Technik",
       story:
         "Combining quattro all-wheel traction, progressive electric architecture, and minimalist German cabin craft.",
-      url: "explore-cars.html?brand=audi"
+      heroImage: "../assets/images/audi/audi-rs-etron-gt.jpg",
+      url: "porsche.html?brand=audi"
     },
     {
       id: "lamborghini",
@@ -65,7 +70,8 @@ window.CarVaultData = (function () {
       tagline: "Expect the unexpected",
       story:
         "Razor-sharp Italian wedge silhouettes paired with naturally aspirated and hybrid V12 theatre built to command attention.",
-      url: "explore-cars.html?brand=lamborghini"
+      heroImage: "../assets/images/lamborghini/lamborghini-revuelto.jpg",
+      url: "porsche.html?brand=lamborghini"
     },
     {
       id: "range-rover",
@@ -77,18 +83,20 @@ window.CarVaultData = (function () {
       tagline: "Peerless luxury across any terrain",
       story:
         "Defined the modern luxury SUV with serene cabin isolation, commanding posture, and effortless all-weather capability.",
-      url: "explore-cars.html?brand=range-rover"
+      heroImage: "../assets/images/range rover/range-rover-autobiography.jpg",
+      url: "porsche.html?brand=range-rover"
     }
   ];
 
-  // Inventory counts align directly with the CarVault showcase:
-  // Porsche (1), Mercedes-Benz (2), BMW (2), Audi (1), Lamborghini (1), Range Rover (1).
+  // Vehicle inventory for all six brands.
+
   const CARS = [
     {
       id: "porsche-911-carrera-gts",
       brandId: "porsche",
       brandName: "Porsche",
       name: "911 Carrera GTS",
+      image: "../assets/images/porsche/porsche-911-hero.jpg",
       pricePKR: 69500000,
       category: "Performance",
       status: "Coming Soon",
@@ -104,13 +112,15 @@ window.CarVaultData = (function () {
       brandId: "mercedes-benz",
       brandName: "Mercedes-Benz",
       name: "Mercedes-AMG GT",
+      image: "../assets/images/mercedes-benz/mercedes-amg-gt.jpg",
       pricePKR: 78500000,
       category: "Performance",
       status: "Just Arrived",
       arrivalDate: "2026-11-12",
       arrivalLabel: "12 NOV, 2026",
       specs: "4.0L V8 · 577 HP · 0-100 in 3.2 sec",
-      description: "Hand-built power wrapped in a long sculpted silhouette.",
+      description:
+        "Hand-built power wrapped in a long sculpted silhouette.",
       isFeaturedArrival: true
     },
     {
@@ -118,6 +128,7 @@ window.CarVaultData = (function () {
       brandId: "mercedes-benz",
       brandName: "Mercedes-Benz",
       name: "Mercedes-Maybach S 580",
+      image: "../assets/images/mercedes-benz/mercedes-maybach-s580.jpg",
       pricePKR: 92000000,
       category: "Luxury & Comfort",
       status: "Available",
@@ -133,6 +144,7 @@ window.CarVaultData = (function () {
       brandId: "bmw",
       brandName: "BMW",
       name: "BMW M4 Competition",
+      image: "../assets/images/bmw/bmw-m4-competition.jpg",
       pricePKR: 48700000,
       category: "Performance",
       status: "Just Arrived",
@@ -148,6 +160,7 @@ window.CarVaultData = (function () {
       brandId: "bmw",
       brandName: "BMW",
       name: "BMW i7 xDrive60",
+      image: "../assets/images/bmw/bmw-i7-xdrive60.jpg",
       pricePKR: 64500000,
       category: "Electric Tech",
       status: "Available",
@@ -163,6 +176,7 @@ window.CarVaultData = (function () {
       brandId: "audi",
       brandName: "Audi",
       name: "Audi RS e-tron GT",
+      image: "../assets/images/audi/audi-rs-etron-gt.jpg",
       pricePKR: 54900000,
       category: "Electric Tech",
       status: "Just Arrived",
@@ -178,6 +192,7 @@ window.CarVaultData = (function () {
       brandId: "lamborghini",
       brandName: "Lamborghini",
       name: "Lamborghini Revuelto",
+      image: "../assets/images/lamborghini/lamborghini-revuelto.jpg",
       pricePKR: 185000000,
       category: "Performance",
       status: "Available",
@@ -193,6 +208,7 @@ window.CarVaultData = (function () {
       brandId: "range-rover",
       brandName: "Range Rover",
       name: "Range Rover Autobiography",
+      image: "../assets/images/range rover/range-rover-autobiography.jpg",
       pricePKR: 84000000,
       category: "Space (SUV)",
       status: "Available",
@@ -226,7 +242,9 @@ window.CarVaultData = (function () {
   }
 
   function formatModelCountLabel(count) {
-    return count === 1 ? "1 exceptional model" : count + " exceptional models";
+    return count === 1
+      ? "1 exceptional model"
+      : count + " exceptional models";
   }
 
   function formatPKR(amount) {
@@ -244,3 +262,4 @@ window.CarVaultData = (function () {
     formatPKR: formatPKR
   };
 })();
+

@@ -518,3 +518,87 @@ textarea:focus-visible {
     padding: 2.25rem 1.25rem;
   }
 }
+
+/* Brand Information Popup */
+
+.cv-modal-open {
+  overflow: hidden;
+}
+
+.cv-brand-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.cv-brand-modal.is-open {
+  display: flex;
+}
+
+.cv-brand-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  background: #171717;
+  color: #ffffff;
+  border: 1px solid #b99a55;
+  border-radius: 8px;
+}
+
+.cv-brand-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.cv-brand-modal-close:hover {
+  color: #d4af65;
+}
+
+.cv-brand-modal-tagline {
+  color: #d4af65;
+  margin: 18px 0;
+  font-size: 18px;
+}
+
+.cv-brand-modal-details {
+  color: #d4af65;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.cv-brand-modal-heading {
+  margin-top: 28px;
+  color: #d4af65;
+  font-size: 19px;
+}
+
+.cv-brand-modal-models {
+  padding-left: 20px;
+  line-height: 2;
+  color: #ffffff;
+}
+
+.cv-brand-modal-content p {
+  line-height: 1.8;
+}
+
+@media (max-width: 576px) {
+  .cv-brand-modal-content {
+    padding: 35px 22px;
+  }
+}

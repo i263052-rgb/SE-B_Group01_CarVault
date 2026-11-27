@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="BMW M4 Competition coupe studio illustration">
+  <defs>
+    <radialGradient id="showroomGlow" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#223632"/>
+      <stop offset="55%" stop-color="#13171b"/>
+      <stop offset="100%" stop-color="#0b0c0f"/>
+    </radialGradient>
+    <linearGradient id="coupeBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#243a35"/>
+      <stop offset="50%" stop-color="#162220"/>
+      <stop offset="100%" stop-color="#0d1113"/>
+    </linearGradient>
+    <linearGradient id="floorReflect" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f3c852" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0b0c0f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#showroomGlow)"/>
+  <!-- Showroom Floor & Subtle Gold Horizon -->
+  <line x1="80" y1="530" x2="1120" y2="530" stroke="#f3c852" stroke-opacity="0.28" stroke-width="2"/>
+  <ellipse cx="600" cy="545" rx="450" ry="38" fill="url(#floorReflect)"/>
+  <!-- Sleek M4 Coupe Silhouette -->
+  <path d="M165 470 L215 390 L375 365 L515 270 L785 268 L955 365 L1035 395 L1045 468 L960 482 L245 482 Z"
+        fill="url(#coupeBody)" stroke="#4c645e" stroke-width="2.5"/>
+  <!-- Cabin Glass -->
+  <path d="M405 360 L525 282 L765 282 L890 358 Z" fill="#0d1015" stroke="#536863" stroke-width="1.5"/>
+  <!-- Gold Studio Highlight Line -->
+  <path d="M235 402 Q580 375 1010 402" fill="none" stroke="#f3c852" stroke-opacity="0.65" stroke-width="2.5"/>
+  <!-- Iconic Angular LED DRLs -->
+  <path d="M235 422 L275 432 L255 445" fill="none" stroke="#f3c852" stroke-width="4" stroke-linecap="round"/>
+  <path d="M285 426 L325 434 L306 447" fill="none" stroke="#f3c852" stroke-width="4" stroke-linecap="round"/>
+  <!-- Wheels -->
+  <g transform="translate(345,482)">
+    <circle r="66" fill="#0c0e11" stroke="#3c464a" stroke-width="3"/>
+    <circle r="44" fill="#181d22" stroke="#f3c852" stroke-opacity="0.65" stroke-width="2"/>
+    <circle r="12" fill="#f3c852"/>
+  </g>
+  <g transform="translate(865,482)">
+    <circle r="66" fill="#0c0e11" stroke="#3c464a" stroke-width="3"/>
+    <circle r="44" fill="#181d22" stroke="#f3c852" stroke-opacity="0.65" stroke-width="2"/>
+    <circle r="12" fill="#f3c852"/>
+  </g>
+</svg>

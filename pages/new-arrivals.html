@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover What's Next at CarVault: featuring the Mercedes-AMG GT, newly arrived and upcoming luxury models, and the Find Your Match questionnaire." />
+  <title>What's Next (New Arrivals) | CARVAULT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/new-arrivals.css" />
+</head>
+<body class="cv-body">
+  <a class="cv-skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="cv-topbar">
+    THE ART OF AUTOMOTIVE EXCELLENCE &middot; ISLAMABAD, PAKISTAN
+  </div>
+
+  <!-- Shared Navigation Header -->
+  <header class="cv-header">
+    <nav class="navbar navbar-expand-xl cv-navbar" aria-label="Primary Navigation">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="cv-brand-logo" href="../index.html" aria-label="CarVault Home">
+          <span>CAR</span><span class="cv-brand-star" aria-hidden="true">&#10022;</span><span>VAULT</span>
+        </a>
+
+        <button
+          class="navbar-toggler cv-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#cvPrimaryNav"
+          aria-controls="cvPrimaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse cv-nav-collapse" id="cvPrimaryNav">
+          <ul class="cv-nav-list ms-xl-4 me-xl-auto">
+            <li><a class="cv-nav-link" href="../index.html">HOME</a></li>
+            <li><a class="cv-nav-link" href="explore-cars.html">EXPLORE CARS</a></li>
+            <li><a class="cv-nav-link" href="brands.html">BRANDS</a></li>
+            <li><a class="cv-nav-link is-active" href="new-arrivals.html" aria-current="page">NEW ARRIVALS</a></li>
+            <li><a class="cv-nav-link" href="offers.html">OFFERS</a></li>
+            <li><a class="cv-nav-link" href="about.html">ABOUT</a></li>
+            <li><a class="cv-nav-link" href="contact.html">CONTACT</a></li>
+            <li><a class="cv-nav-link" href="compare.html">COMPARE</a></li>
+            <li><a class="cv-nav-link" href="finance.html">FINANCE</a></li>
+            <li><a class="cv-nav-link" href="test-drive.html">TEST DRIVE</a></li>
+            <li>
+              <a class="cv-nav-link" href="saved-cars.html">
+                SAVED CARS <span aria-hidden="true">&#9825;</span>
+                <span class="cv-saved-count is-empty" data-saved-count>0</span>
+              </a>
+            </li>
+            <li><a class="cv-nav-link" href="admin.html">ADMIN</a></li>
+          </ul>
+
+          <a class="cv-cta-btn ms-xl-3" href="test-drive.html">
+            BOOK A TEST DRIVE <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="cv-page-hero" aria-labelledby="whats-next-heading">
+      <div class="container">
+        <div class="cv-arrivals-header-row">
+          <div>
+            <span class="cv-eyebrow">CARVAULT / WHAT'S NEXT.</span>
+            <h1 id="whats-next-heading" class="cv-hero-title mb-0">What's Next.</h1>
+          </div>
+          <p class="cv-subtitle">The latest additions to our collection</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Monthly Arrival: Mercedes-AMG GT -->
+    <section class="cv-featured-section" aria-labelledby="featured-amg-heading">
+      <div class="container">
+        <div class="cv-featured-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-6">
+              <div class="cv-featured-media">
+                <span class="cv-status-pill">New Arrival</span>
+                <img
+                  src="../assets/images/arrivals/mercedes-amg-gt.jpg"
+                  alt="Obsidian black Mercedes-AMG GT coupe featured inside CarVault showroom"
+                />
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <span class="cv-eyebrow">FEATURED THIS MONTH</span>
+              <h2 id="featured-amg-heading" class="cv-featured-title">Mercedes-AMG GT</h2>
+              <p class="cv-spec-line">4.0L V8 &middot; 577 HP &middot; 0-100 in 3.2 sec</p>
+              <p class="cv-subtitle">Hand-built power wrapped in a long sculpted silhouette.</p>
+              <p class="cv-arrival-date">Arrived: 12 NOV, 2026</p>
+
+              <div class="d-flex flex-wrap gap-3">
+                <button type="button" class="cv-btn-primary" id="featuredDetailsBtn">
+                  View Details
+                </button>
+                <button type="button" class="cv-btn-outline cv-save-btn" id="featuredSaveBtn" aria-pressed="false">
+                  <span aria-hidden="true">&#9825;</span> Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter, Sort & Arrival Vehicle Cards -->
+    <section class="cv-arrivals-catalog" aria-label="New arrival vehicles">
+      <div class="container">
+        <div class="cv-filter-toolbar">
+          <div class="cv-filter-group" id="arrivalFilterGroup" role="group" aria-label="Filter arrivals by status">
+            <button type="button" class="cv-filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="cv-filter-btn" data-filter="Just Arrived" aria-pressed="false">Just Arrived</button>
+            <button type="button" class="cv-filter-btn" data-filter="Coming Soon" aria-pressed="false">Coming Soon</button>
+          </div>
+
+          <div class="cv-sort-wrap">
+            <label class="cv-sort-label" for="arrivalSortSelect">Sort:</label>
+            <select id="arrivalSortSelect" class="cv-sort-select" aria-label="Sort new arrival vehicles">
+              <option value="newest">Newest first</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="cv-subtitle mb-3" id="arrivalsCountText" aria-live="polite"></p>
+        <div class="row g-4" id="arrivalsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Find Your Match Interactive Questionnaire -->
+    <section class="cv-match-section" aria-labelledby="find-match-heading">
+      <div class="container">
+        <div class="cv-match-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-6">
+              <span class="cv-eyebrow">FIND YOUR MATCH</span>
+              <h2 id="find-match-heading" class="cv-section-title">Which Drive Defines You?</h2>
+
+              <div class="cv-quiz-progress-bar" aria-hidden="true">
+                <div class="cv-quiz-progress-fill" id="quizProgressFill" style="width: 33%;"></div>
+              </div>
+
+              <div id="quizContainer" aria-live="polite"></div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="cv-match-preview">
+                <img
+                  id="matchPreviewImage"
+                  src="../assets/images/arrivals/mercedes-amg-gt.jpg"
+                  alt="CarVault luxury performance coupe preview for your personalized drive match"
+                />
+                <div class="cv-match-caption" id="matchPreviewCaption">
+                  Select your driving priorities to reveal your ideal CarVault arrival.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vehicle Details Modal -->
+  <div class="modal fade" id="arrivalDetailModal" tabindex="-1" aria-labelledby="arrivalModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content cv-modal-content">
+        <div class="modal-header cv-modal-header">
+          <h3 class="modal-title h5 mb-0" id="arrivalModalTitle">Vehicle Details</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="arrivalModalBody"></div>
+        <div class="modal-footer cv-modal-footer">
+          <button type="button" class="cv-btn-outline" id="arrivalModalSaveBtn">&#9825; Save Car</button>
+          <a href="test-drive.html" class="cv-cta-btn">Book a Test Drive &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Footer -->
+  <footer class="cv-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-5">
+          <a class="cv-brand-logo" href="../index.html" aria-label="CarVault Home">
+            <span>CAR</span><span class="cv-brand-star" aria-hidden="true">&#10022;</span><span>VAULT</span>
+          </a>
+          <p class="cv-footer-desc">
+            An elevated way to discover, compare and experience the world's most extraordinary automobiles.
+          </p>
+          <p class="cv-footer-tagline">DRIVE THE EXTRAORDINARY.</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="cv-footer-heading">Discover</h3>
+          <ul class="cv-footer-links">
+            <li><a href="explore-cars.html">Our Collection</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="cv-footer-heading">Services</h3>
+          <ul class="cv-footer-links">
+            <li><a href="compare.html">Compare Cars</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="test-drive.html">Test Drive</a></li>
+            <li><a href="saved-cars.html">Wishlist</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="cv-footer-heading">Company</h3>
+          <ul class="cv-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">Help &amp; FAQ</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-footer-bottom">
+        <span>&copy; 2026 CARVAULT. A luxury showroom concept website. Vehicle prices and availability are illustrative.</span>
+        <span class="cv-footer-craft">CRAFTED FOR THE EXTRAORDINARY</span>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/new-arrivals.js"></script>
+</body>
+</html>
