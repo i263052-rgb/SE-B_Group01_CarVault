@@ -1,0 +1,558 @@
+/* ==========================================================================
+   CarVault Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --cv-bg: #f4f6f9;
+  --cv-surface: #ffffff;
+  --cv-surface-alt: #f8fafc;
+  --cv-dark: #0d131a;
+  --cv-dark-elevated: #161f29;
+  --cv-border: #dce3ec;
+  --cv-text: #16202a;
+  --cv-text-muted: #5b6878;
+  --cv-primary: #1d4ed8;
+  --cv-primary-hover: #1e40af;
+  --cv-accent: #f59e0b;
+  --cv-success: #059669;
+  --cv-danger: #dc2626;
+  --cv-radius: 0.875rem;
+  --cv-shadow-sm: 0 4px 14px rgba(13, 19, 26, 0.06);
+  --cv-shadow-md: 0 12px 28px rgba(13, 19, 26, 0.12);
+
+  /* Promotional Banner image slot:
+     Replace 'none' with url('../images/your-promo-banner.jpg') to use a custom photo */
+  --promo-banner-image: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--cv-bg);
+  color: var(--cv-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ==========================================================================
+   Shared Header & Navigation
+   ========================================================================== */
+
+.carvault-navbar {
+  background-color: var(--cv-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.carvault-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.carvault-brand:hover,
+.carvault-brand:focus {
+  color: #ffffff;
+}
+
+.carvault-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--cv-primary), #3b82f6);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.carvault-brand-accent {
+  color: var(--cv-accent);
+}
+
+.carvault-navbar .navbar-nav {
+  gap: 0.15rem;
+}
+
+.carvault-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.carvault-navbar .nav-link:hover,
+.carvault-navbar .nav-link:focus-visible {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.carvault-navbar .nav-link.active {
+  color: #ffffff;
+  background-color: var(--cv-primary);
+  font-weight: 600;
+}
+
+.carvault-toggler {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.carvault-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.45);
+}
+
+@media (min-width: 1200px) {
+  .carvault-toggler {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Hero / Promotional Banner
+   ========================================================================== */
+
+.promo-banner {
+  position: relative;
+  width: 100%;
+  background-color: var(--cv-dark);
+  background-image:
+    linear-gradient(120deg, rgba(13, 19, 26, 0.92) 0%, rgba(22, 31, 41, 0.84) 55%, rgba(29, 78, 216, 0.72) 100%),
+    var(--promo-banner-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 4.25rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 25%, rgba(245, 158, 11, 0.16), transparent 48%);
+  pointer-events: none;
+}
+
+.promo-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.promo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background-color: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fcd34d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.promo-banner-title {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.promo-banner-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin-bottom: 1.75rem;
+}
+
+.promo-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.promo-highlight-pill {
+  background-color: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.875rem;
+  color: #f8fafc;
+}
+
+.promo-highlight-pill strong {
+  color: #fcd34d;
+}
+
+/* ==========================================================================
+   Section Headings
+   ========================================================================== */
+
+.section-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cv-text);
+  margin-bottom: 0.35rem;
+}
+
+.section-subheading {
+  color: var(--cv-text-muted);
+  font-size: 0.975rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Special Vehicle Offer Cards
+   ========================================================================== */
+
+.offer-card {
+  background-color: var(--cv-surface);
+  border: 1px solid var(--cv-border);
+  border-radius: var(--cv-radius);
+  box-shadow: var(--cv-shadow-sm);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cv-shadow-md);
+  border-color: #bfd0e6;
+}
+
+.offer-card-media {
+  position: relative;
+  background-color: #101720;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.offer-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-discount-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background-color: var(--cv-danger);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+}
+
+.offer-category-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cv-primary);
+}
+
+.offer-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cv-text);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.offer-specs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.offer-spec-chip {
+  font-size: 0.78rem;
+  color: var(--cv-text-muted);
+  background-color: var(--cv-surface-alt);
+  border: 1px solid var(--cv-border);
+  border-radius: 0.45rem;
+  padding: 0.2rem 0.55rem;
+}
+
+.offer-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  margin-top: auto;
+  border-top: 1px solid var(--cv-border);
+}
+
+.offer-price-original {
+  font-size: 0.9rem;
+  color: var(--cv-text-muted);
+  text-decoration: line-through;
+  margin-right: 0.4rem;
+}
+
+.offer-price-discounted {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--cv-text);
+}
+
+.offer-price-unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cv-text-muted);
+}
+
+.btn-carvault {
+  background-color: var(--cv-primary);
+  border-color: var(--cv-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-carvault:hover,
+.btn-carvault:focus {
+  background-color: var(--cv-primary-hover);
+  border-color: var(--cv-primary-hover);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Interactive Tools (Discount Code & Discount Calculator)
+   ========================================================================== */
+
+.tool-card {
+  background-color: var(--cv-surface);
+  border: 1px solid var(--cv-border);
+  border-radius: var(--cv-radius);
+  box-shadow: var(--cv-shadow-sm);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tool-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.65rem;
+  background-color: rgba(29, 78, 216, 0.1);
+  color: var(--cv-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tool-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.promo-feedback {
+  margin-top: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
+}
+
+.promo-feedback.is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.promo-feedback.is-success {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.promo-feedback.is-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.promo-hints {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--cv-text-muted);
+}
+
+.promo-code-pill {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  font-size: 0.78rem;
+  background-color: var(--cv-surface-alt);
+  border: 1px solid var(--cv-border);
+  color: var(--cv-text);
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.35rem;
+}
+
+.calc-result-box {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 0.75rem;
+  background-color: var(--cv-dark);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.calc-total-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.calc-total-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fcd34d;
+  line-height: 1.1;
+}
+
+.calc-savings-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6ee7b7;
+}
+
+.calc-feedback {
+  min-height: 1.25rem;
+  margin-top: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--cv-text-muted);
+}
+
+.calc-feedback.is-error {
+  color: var(--cv-danger);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Modal Details
+   ========================================================================== */
+
+.offer-modal-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.65rem;
+  background-color: #101720;
+}
+
+.offer-modal-terms {
+  background-color: var(--cv-surface-alt);
+  border: 1px solid var(--cv-border);
+  border-radius: 0.65rem;
+  padding: 0.9rem 1rem;
+  font-size: 0.88rem;
+  color: var(--cv-text-muted);
+}
+
+/* ==========================================================================
+   Shared Footer
+   ========================================================================== */
+
+.carvault-footer {
+  background-color: var(--cv-dark);
+  color: rgba(255, 255, 255, 0.78);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.carvault-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carvault-footer-links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.18s ease;
+}
+
+.carvault-footer-links a:hover,
+.carvault-footer-links a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.carvault-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.75rem;
+  padding-top: 1.15rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
