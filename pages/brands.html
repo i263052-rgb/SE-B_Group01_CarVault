@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore CarVault's curated luxury automotive marques including Porsche, Mercedes-Benz, BMW, Audi, Lamborghini, and Range Rover." />
+  <title>Explore Brands | CARVAULT</title>
+
+  <!-- Google Fonts (with crisp system sans fallbacks in CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- CarVault Shared Styles -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="cv-body">
+  <a class="cv-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Announcement Tagline -->
+  <div class="cv-topbar">
+    THE ART OF AUTOMOTIVE EXCELLENCE &middot; ISLAMABAD, PAKISTAN
+  </div>
+
+  <!-- Shared Navigation Header -->
+  <header class="cv-header">
+    <nav class="navbar navbar-expand-xl cv-navbar" aria-label="Primary Navigation">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="cv-brand-logo" href="../index.html" aria-label="CarVault Home">
+          <span>CAR</span><span class="cv-brand-star" aria-hidden="true">&#10022;</span><span>VAULT</span>
+        </a>
+
+        <button
+          class="navbar-toggler cv-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#cvPrimaryNav"
+          aria-controls="cvPrimaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse cv-nav-collapse" id="cvPrimaryNav">
+          <ul class="cv-nav-list ms-xl-4 me-xl-auto">
+            <li><a class="cv-nav-link" href="../index.html">HOME</a></li>
+            <li><a class="cv-nav-link" href="explore-cars.html">EXPLORE CARS</a></li>
+            <li><a class="cv-nav-link is-active" href="brands.html" aria-current="page">BRANDS</a></li>
+            <li><a class="cv-nav-link" href="new-arrivals.html">NEW ARRIVALS</a></li>
+            <li><a class="cv-nav-link" href="offers.html">OFFERS</a></li>
+            <li><a class="cv-nav-link" href="about.html">ABOUT</a></li>
+            <li><a class="cv-nav-link" href="contact.html">CONTACT</a></li>
+            <li><a class="cv-nav-link" href="compare.html">COMPARE</a></li>
+            <li><a class="cv-nav-link" href="finance.html">FINANCE</a></li>
+            <li><a class="cv-nav-link" href="test-drive.html">TEST DRIVE</a></li>
+            <li>
+              <a class="cv-nav-link" href="saved-cars.html">
+                SAVED CARS <span aria-hidden="true">&#9825;</span>
+                <span class="cv-saved-count is-empty" data-saved-count>0</span>
+              </a>
+            </li>
+            <li><a class="cv-nav-link" href="admin.html">ADMIN</a></li>
+          </ul>
+
+          <a class="cv-cta-btn ms-xl-3" href="test-drive.html">
+            BOOK A TEST DRIVE <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="cv-page-hero" aria-labelledby="brands-hero-heading">
+      <div class="container">
+        <span class="cv-eyebrow">CARVAULT / THE COLLECTION</span>
+        <h1 id="brands-hero-heading" class="cv-hero-title">The Finest Marques.</h1>
+        <p class="cv-subtitle">Explore the automotive icons that inspire us.</p>
+      </div>
+    </section>
+
+    <!-- Curated Brands Directory -->
+    <section class="cv-section-block" aria-labelledby="explore-brands-heading">
+      <div class="container">
+        <div class="row align-items-end justify-content-between g-3 mb-4 mb-md-5">
+          <div class="col-12 col-lg-7">
+            <span class="cv-eyebrow">CARVAULT / CURATED FOR YOU</span>
+            <h2 id="explore-brands-heading" class="cv-section-title">Explore Our Brands</h2>
+          </div>
+          <div class="col-12 col-lg-5 text-lg-end">
+            <p class="cv-subtitle">
+              Every marque brings its own philosophy of craftsmanship and performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Subtle last-visited brand memory banner (rendered only when stored) -->
+        <div id="lastExploredBanner" class="cv-resume-banner d-none" role="region" aria-label="Recently explored brand"></div>
+
+        <!-- Data-driven 3-column desktop / responsive mobile brand grid -->
+        <div id="brandsGrid" class="row g-4" aria-live="polite">
+          <noscript>
+            <div class="col-12">
+              <p class="cv-subtitle">Please enable JavaScript to view the live CarVault marque directory.</p>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="cv-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-5">
+          <a class="cv-brand-logo" href="../index.html" aria-label="CarVault Home">
+            <span>CAR</span><span class="cv-brand-star" aria-hidden="true">&#10022;</span><span>VAULT</span>
+          </a>
+          <p class="cv-footer-desc">
+            An elevated way to discover, compare and experience the world's most extraordinary automobiles.
+          </p>
+          <p class="cv-footer-tagline">DRIVE THE EXTRAORDINARY.</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="cv-footer-heading">Discover</h3>
+          <ul class="cv-footer-links">
+            <li><a href="explore-cars.html">Our Collection</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="cv-footer-heading">Services</h3>
+          <ul class="cv-footer-links">
+            <li><a href="compare.html">Compare Cars</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="test-drive.html">Test Drive</a></li>
+            <li><a href="saved-cars.html">Wishlist</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="cv-footer-heading">Company</h3>
+          <ul class="cv-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">Help &amp; FAQ</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-footer-bottom">
+        <span>&copy; 2026 CARVAULT. A luxury showroom concept website. Vehicle prices and availability are illustrative.</span>
+        <span class="cv-footer-craft">CRAFTED FOR THE EXTRAORDINARY</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS (pure vanilla JavaScript) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/brands.js"></script>
+</body>
+</html>
