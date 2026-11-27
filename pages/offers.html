@@ -3,188 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Offers &amp; Promo Codes | CarVault</title>
+    <title>Exclusive Offers &amp; Promo Codes | CarVault</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Base styles first, then page theme override -->
     <link rel="stylesheet" href="../css/style.css" />
-    <style>
-      .offer-modal-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: 90;
-        background: rgba(9, 23, 21, 0.84);
-        backdrop-filter: blur(8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-      .offer-modal-dialog {
-        width: min(760px, 100%);
-        max-height: 90vh;
-        overflow-y: auto;
-        border-color: var(--gold);
-        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
-      }
-      .offer-modal-img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        border: 1px solid var(--line);
-        margin-bottom: 16px;
-      }
-      .offer-modal-list {
-        margin: 8px 0 0;
-        padding-left: 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/offers-theme.css" />
   </head>
+
   <body>
-    <div class="topbar">
-      Royal Emerald Fleet Offers &middot; Use VAULT15, STUDENT10, or WEEKEND20 for Instant Savings
+
+    <!-- ══════════════════════════════════════════════════
+         TOPBAR
+    ══════════════════════════════════════════════════ -->
+    <div class="topbar" role="banner">
+      THE ART OF AUTOMOTIVE EXCELLENCE &nbsp;·&nbsp; ISLAMABAD, PAKISTAN
     </div>
 
-    <header class="header">
+    <!-- ══════════════════════════════════════════════════
+         HEADER
+    ══════════════════════════════════════════════════ -->
+    <header class="header" role="banner">
       <div class="nav wrap">
-        <a class="logo" href="../index.html">CAR<span>VAULT</span></a>
 
+        <!-- Logo -->
+        <a class="ov-logo" href="../index.html" aria-label="CarVault – Home">
+          CAR <span class="ov-star">✦</span> VAULT
+        </a>
+
+        <!-- Primary Nav (12 links) -->
         <nav class="navlinks" id="navLinks" aria-label="Primary navigation">
           <a href="../index.html">Home</a>
           <a href="explore.html">Explore Cars</a>
-          <a href="cars.html">Cars</a>
           <a href="brands.html">Brands</a>
           <a href="new-arrivals.html">New Arrivals</a>
-          <a href="rental.html">Rental</a>
           <a href="offers.html" class="active" aria-current="page">Offers</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="saved.html">Saved</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a href="compare.html">Compare</a>
+          <a href="finance.html">Finance</a>
+          <a href="test-drive.html">Test Drive</a>
+          <a href="saved.html">Saved Cars</a>
+          <a href="admin.html">&#9825; Admin</a>
         </nav>
 
-        <button
-          type="button"
-          class="menu-toggle btn outline small"
-          id="menuToggle"
-          aria-expanded="false"
-          aria-controls="navLinks"
-        >
-          Menu
-        </button>
+        <!-- CTA + mobile toggle -->
+        <div class="nav-actions" style="display:flex;align-items:center;gap:12px;">
+          <a href="test-drive.html" class="ov-cta-btn">
+            BOOK A TEST DRIVE &rarr;
+          </a>
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="navLinks"
+            aria-label="Toggle navigation menu"
+          >
+            Menu
+          </button>
+        </div>
+
       </div>
     </header>
 
     <main>
-      <!-- Full-width Promotional Banner -->
-      <section class="banner" aria-label="Promotional Banner">
-        <div class="wrap hero-content">
-          <div class="eyebrow">PROMOTIONAL BANNER</div>
-          <h1 style="font-size: clamp(2rem, 3.5vw, 3.4rem); letter-spacing: -0.055em; max-width: 620px; margin-bottom: 16px;">
-            Save up to 20% on Executive, SUV &amp; Weekend Rentals
-          </h1>
-          <p style="max-width: 540px; margin-bottom: 28px;">
-            Unlock seasonal CarVault fleet privileges, transparent daily rates, and instant promo code discounts across our newest sedans, luxury SUVs, and performance coupes.
+
+      <!-- ══════════════════════════════════════════════
+           HERO
+      ══════════════════════════════════════════════ -->
+      <section class="ov-hero" aria-label="Offers hero">
+        <div class="wrap">
+          <div class="ov-hero-eyebrow">CARVAULT / SEASONAL PRIVILEGES</div>
+          <h1>Exclusive Offers.</h1>
+          <p>
+            Unlock seasonal fleet privileges, transparent PKR pricing, and instant
+            promo code savings across our curated collection of executive sedans,
+            luxury SUVs, and performance coupes.
           </p>
-          <div class="hero-actions">
-            <a href="#special-offers" class="btn">Browse Special Offers</a>
-            <a href="#offer-tools" class="btn outline">Apply Promo Code</a>
+          <div class="ov-hero-actions">
+            <a href="#special-offers" class="ov-hero-btn-primary">Browse Special Offers</a>
+            <a href="#offer-tools" class="ov-hero-btn-outline">Apply Promo Code</a>
           </div>
         </div>
       </section>
 
-      <!-- Special Vehicle Offers -->
-      <section id="special-offers" class="section" aria-labelledby="special-offers-heading">
+      <!-- ══════════════════════════════════════════════
+           SPECIAL VEHICLE OFFERS (Dark Charcoal #191a1d)
+      ══════════════════════════════════════════════ -->
+      <section id="special-offers" class="ov-section" aria-labelledby="special-offers-heading">
         <div class="wrap">
-          <div class="section-head">
+
+          <div class="ov-section-head">
             <div>
-              <div class="eyebrow">Featured Fleet Deals</div>
-              <h2 id="special-offers-heading">Special vehicle offers</h2>
+              <div class="ov-eyebrow">Featured Fleet Deals</div>
+              <h2 id="special-offers-heading" class="ov-heading">Special vehicle offers</h2>
             </div>
             <p>
-              Limited-time daily rental rates across our signature collection. Select View on any vehicle to inspect full offer pricing, inclusions, and terms.
+              Limited-time rates across our signature collection in Islamabad. Select
+              <em>View Details</em> on any vehicle to inspect full offer pricing,
+              inclusions, and terms.
             </p>
           </div>
 
-          <div class="grid" id="offers-grid"></div>
+          <!-- Cards injected by offers.js -->
+          <div class="ov-grid" id="offers-grid" role="list"></div>
+
         </div>
       </section>
 
-      <!-- Interactive Tools Row -->
-      <section id="offer-tools" class="section alt" aria-label="Promo code and discount calculator tools">
+      <!-- ══════════════════════════════════════════════
+           INTERACTIVE TOOLS (Dark Obsidian #141517)
+      ══════════════════════════════════════════════ -->
+      <section id="offer-tools" class="ov-section-alt" aria-label="Promo code and discount calculator tools">
         <div class="wrap">
-          <div class="section-head">
+
+          <div class="ov-section-head">
             <div>
-              <div class="eyebrow">Interactive Savings Tools</div>
-              <h2>Promo codes &amp; rate calculator</h2>
+              <div class="ov-eyebrow">Interactive Savings Tools</div>
+              <h2 class="ov-heading">Promo codes &amp; rate calculator</h2>
             </div>
             <p>
-              Validate your seasonal CarVault promo code or calculate discounted rental totals in real time.
+              Validate your CarVault promo code or calculate discounted PKR totals
+              in real time — savings are saved to your browser session.
             </p>
           </div>
 
-          <div class="grid two">
-            <!-- Discount Code Box -->
-            <div class="panel">
+          <div class="ov-tools-grid">
+
+            <!-- ── Promo Code Box ──────────────────────── -->
+            <div class="ov-panel">
               <h3>Discount Code</h3>
               <p>
-                Enter an active CarVault promo code and press Enter or Apply to save it to your browser session.
+                Enter an active CarVault promo code and press Apply to save it
+                to your browser session.
               </p>
 
               <form id="promo-code-form" novalidate>
-                <label for="promo-code-input">Promo Code</label>
-                <div class="car-select">
+                <label for="promo-code-input" class="ov-label">Promo Code</label>
+                <div class="ov-input-row">
                   <input
                     type="text"
                     id="promo-code-input"
-                    class="field"
-                    placeholder="Enter promo code (e.g. VAULT15)"
+                    class="ov-input"
+                    placeholder="e.g. VAULT15"
                     autocomplete="off"
+                    spellcheck="false"
                   />
-                  <button type="submit" id="apply-promo-btn" class="btn">Apply</button>
+                  <button type="submit" class="ov-apply-btn">Apply</button>
                 </div>
               </form>
 
-              <div id="promo-feedback" class="notice hidden" role="status" aria-live="polite"></div>
+              <div id="promo-feedback" class="hidden" role="status" aria-live="polite"></div>
 
-              <div class="meta" style="margin-top: 18px;">
-                Active codes: <span class="gold">VAULT15</span> (-15%) &middot;
-                <span class="gold">STUDENT10</span> (-10%) &middot;
-                <span class="gold">WEEKEND20</span> (-20%)
+              <div class="ov-active-codes">
+                Active codes:
+                <span class="ov-code-chip">VAULT15</span> &minus;15% &nbsp;&middot;&nbsp;
+                <span class="ov-code-chip">STUDENT10</span> &minus;10% &nbsp;&middot;&nbsp;
+                <span class="ov-code-chip">WEEKEND20</span> &minus;20%
               </div>
             </div>
 
-            <!-- Discount Calculator Box -->
-            <div class="panel">
+            <!-- ── Discount Calculator Box ────────────── -->
+            <div class="ov-panel">
               <h3>Discount Calculator</h3>
               <p>
-                Enter a rental price and discount percentage to calculate your final total automatically.
+                Enter a vehicle price in PKR and discount percentage to calculate your final
+                total automatically — updates live as you type.
               </p>
 
-              <div class="form-grid">
+              <div class="ov-calc-grid">
                 <div>
-                  <label for="calc-price">Price ($)</label>
+                  <label for="calc-price" class="ov-label">Price (PKR)</label>
                   <input
                     type="number"
                     id="calc-price"
-                    class="field"
-                    placeholder="e.g. 160"
+                    class="ov-input"
+                    placeholder="e.g. 22000000"
+                    value="22000000"
                     min="0"
-                    step="0.01"
+                    step="100000"
                   />
                 </div>
                 <div>
-                  <label for="calc-discount">%</label>
+                  <label for="calc-discount" class="ov-label">Discount (%)</label>
                   <input
                     type="number"
                     id="calc-discount"
-                    class="field"
+                    class="ov-input"
                     placeholder="e.g. 15"
+                    value="15"
                     min="0"
                     max="100"
                     step="0.1"
@@ -192,116 +207,147 @@
                 </div>
               </div>
 
-              <div id="calc-feedback" class="meta" aria-live="polite" style="margin-top: 12px;"></div>
+              <div id="calc-feedback" class="ov-calc-hint" aria-live="polite"></div>
 
-              <div class="stat" style="margin-top: 18px;">
-                <span>Total</span>
-                <strong id="calc-total">$0.00</strong>
-                <div id="calc-savings" class="meta" style="margin-top: 6px;">Savings: $0.00</div>
+              <div class="ov-stat-box">
+                <div class="ov-stat-label">Total after discount</div>
+                <div id="calc-total" class="ov-stat-value">PKR 18,700,000</div>
+                <div id="calc-savings" class="ov-stat-savings">Savings: PKR 3,300,000</div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
     </main>
 
-    <!-- Offer Details Modal -->
+    <!-- ══════════════════════════════════════════════════
+         OFFER DETAILS MODAL
+    ══════════════════════════════════════════════════ -->
     <div
       id="offerDetailsModal"
-      class="offer-modal-backdrop hidden"
+      class="ov-modal-backdrop hidden"
       role="dialog"
       aria-modal="true"
       aria-labelledby="offerModalTitle"
     >
-      <div class="panel offer-modal-dialog">
-        <div class="row" style="margin-bottom: 18px;">
+      <div class="ov-modal-dialog">
+
+        <!-- Header -->
+        <div class="ov-modal-header">
           <div>
-            <div id="offerModalCategory" class="eyebrow" style="margin-bottom: 6px;"></div>
-            <h3 id="offerModalTitle" style="font-size: 1.5rem; margin-bottom: 0;">Vehicle Offer</h3>
+            <div id="offerModalCategory" class="ov-modal-category"></div>
+            <h3 id="offerModalTitle" class="ov-modal-title">Vehicle Offer</h3>
           </div>
-          <button type="button" id="offerModalClose" class="btn ghost small" aria-label="Close modal">
-            Close
+          <button type="button" id="offerModalClose" class="ov-modal-close-btn" aria-label="Close modal">
+            ✕ Close
           </button>
         </div>
 
-        <img id="offerModalImage" src="" alt="" class="offer-modal-img" />
-
-        <div class="row" style="margin-bottom: 14px; flex-wrap: wrap;">
-          <span id="offerModalBadge" class="pill"></span>
-          <span class="meta">Offer Code: <strong id="offerModalCode" class="gold"></strong></span>
+        <!-- Studio White Car Image -->
+        <div class="ov-modal-img-container">
+          <img id="offerModalImage" src="" alt="" class="ov-modal-img modal-img" />
         </div>
 
-        <p id="offerModalSummary"></p>
+        <!-- Badges row -->
+        <div class="ov-modal-badges">
+          <span id="offerModalBadge" class="ov-modal-badge"></span>
+          <span class="ov-modal-code-tag">
+            Code: <strong id="offerModalCode"></strong>
+          </span>
+        </div>
 
-        <div class="stat" style="margin: 16px 0; padding: 18px;">
-          <div class="row" style="flex-wrap: wrap;">
-            <div>
-              <span>Discounted Daily Rate</span>
-              <strong id="offerModalDiscountedPrice"></strong>
-            </div>
-            <div style="text-align: right;">
-              <div class="meta">Standard Rate: <span id="offerModalOriginalPrice" style="text-decoration: line-through;"></span></div>
-              <div id="offerModalSavings" class="gold small-text" style="font-weight: 700; margin-top: 4px;"></div>
-            </div>
+        <!-- Summary -->
+        <p id="offerModalSummary" class="ov-modal-summary"></p>
+
+        <!-- Price row -->
+        <div class="ov-modal-price-row">
+          <div>
+            <div class="ov-stat-label">Discounted Price</div>
+            <div id="offerModalDiscountedPrice" class="ov-modal-price-sale"></div>
+          </div>
+          <div style="text-align:right;">
+            <div id="offerModalOriginalPrice" class="ov-modal-price-original"></div>
+            <div id="offerModalSavings" class="ov-modal-savings-tag"></div>
           </div>
         </div>
 
-        <div class="meta" style="margin-bottom: 12px;">
-          <strong style="color: var(--text);">Specifications:</strong> <span id="offerModalSpecs"></span>
-        </div>
+        <!-- Specs -->
+        <p class="ov-modal-specs">
+          <strong>Specifications:</strong>
+          <span id="offerModalSpecs"></span>
+        </p>
 
-        <div style="margin-bottom: 16px;">
-          <div class="tagline gold" style="font-weight: 800;">Included Benefits</div>
-          <ul id="offerModalInclusions" class="offer-modal-list"></ul>
-        </div>
+        <!-- Inclusions -->
+        <div class="ov-modal-inclusions-label">Included Benefits</div>
+        <ul id="offerModalInclusions" class="ov-modal-list"></ul>
 
-        <div class="notice" style="margin-bottom: 20px;">
-          <strong style="display: block; margin-bottom: 4px;">Offer Terms &amp; Conditions</strong>
+        <!-- Terms -->
+        <div class="ov-modal-terms">
+          <strong>Offer Terms &amp; Conditions</strong>
           <span id="offerModalTerms"></span>
         </div>
 
-        <div class="row" style="justify-content: flex-end;">
-          <button type="button" id="offerModalDismiss" class="btn outline small">Close</button>
-          <a href="rental.html" class="btn small">Reserve This Vehicle</a>
+        <!-- Actions -->
+        <div class="ov-modal-actions">
+          <button type="button" id="offerModalDismiss" class="ov-modal-dismiss">Close</button>
+          <a href="test-drive.html" class="ov-modal-reserve">Book a Test Drive &rarr;</a>
         </div>
+
       </div>
     </div>
 
-    <!-- Shared Footer -->
-    <footer class="footer">
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer class="ov-footer" role="contentinfo">
       <div class="wrap">
-        <div class="footer-grid">
+        <div class="ov-footer-grid">
+
+          <!-- Brand column -->
           <div>
-            <div class="logo" style="margin-bottom: 14px;">CAR<span>VAULT</span></div>
-            <p class="small-text">
-              Curated luxury rentals, transparent daily pricing, and flexible fleet privileges across every CarVault hub.
+            <div class="ov-footer-logo">
+              CAR <span class="ov-star">✦</span> VAULT
+            </div>
+            <p class="ov-footer-blurb">
+              Curated luxury vehicles, transparent PKR pricing, and flexible fleet
+              privileges across every CarVault hub in Pakistan.
             </p>
           </div>
-          <div>
-            <div class="tagline gold" style="font-weight: 800; margin-bottom: 8px;">Explore</div>
+
+          <!-- Explore column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Explore</div>
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore Cars</a>
             <a href="brands.html">Brands</a>
             <a href="new-arrivals.html">New Arrivals</a>
           </div>
-          <div>
-            <div class="tagline gold" style="font-weight: 800; margin-bottom: 8px;">Fleet</div>
-            <a href="cars.html">Cars</a>
-            <a href="rental.html">Rental</a>
+
+          <!-- Fleet column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Services</div>
             <a href="offers.html">Offers</a>
-            <a href="saved.html">Saved</a>
+            <a href="compare.html">Compare</a>
+            <a href="finance.html">Finance</a>
+            <a href="test-drive.html">Test Drive</a>
           </div>
-          <div>
-            <div class="tagline gold" style="font-weight: 800; margin-bottom: 8px;">Company</div>
-            <a href="reviews.html">Reviews</a>
+
+          <!-- Company column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Company</div>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <a href="saved.html">Saved Cars</a>
+            <a href="admin.html">Admin</a>
           </div>
+
         </div>
 
-        <div class="footer-bottom">
+        <div class="ov-footer-bottom">
           <span>&copy; 2026 CarVault. All rights reserved.</span>
-          <span>Royal Emerald Edition &middot; Automotive Marketplace &amp; Rental Services</span>
+          <span>The Art of Automotive Excellence &middot; Islamabad, Pakistan</span>
         </div>
       </div>
     </footer>
