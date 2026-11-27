@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details | CAR VAULT</title>
+  <meta name="description" content="View full specifications, gallery photos, pricing, wishlist, and test drive booking for new cars at CAR VAULT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="details" data-prefix="../">
+  <div id="siteHeader"></div>
+
+  <main>
+    <div class="container">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="explore-cars.html">Explore Cars</a>
+        <span aria-hidden="true">/</span>
+        <span id="breadcrumbCarName">Porsche 911 Carrera GTS</span>
+      </nav>
+
+      <!-- Main Car Details Card -->
+      <section class="details-card-shell">
+        <div class="details-split">
+          <!-- Left: Large Image + 3 Gallery Thumbnails -->
+          <div>
+            <div class="gallery-main">
+              <img id="mainCarImage" src="../images/cars/porsche-911.jpg" alt="Selected car view">
+            </div>
+            <div id="galleryThumbs" class="gallery-thumbs" aria-label="Other car views">
+              <!-- Populated by js/car-details.js -->
+            </div>
+          </div>
+
+          <!-- Right: Specifications, Book & Wishlist Buttons -->
+          <div class="details-info">
+            <h1 id="carTitle">Porsche 911 Carrera GTS</h1>
+            <span id="carConditionBadge" class="details-status">Featured · 2025</span>
+            <div id="carPrice" class="details-price">PKR 69,500,000</div>
+
+            <ul class="specs-list">
+              <li><span>Engine</span><strong id="specEngine">3.6L Flat-Six</strong></li>
+              <li><span>Power</span><strong id="specPower">532 HP</strong></li>
+              <li><span>0–100 km/h</span><strong id="specSpeed">3.0 sec</strong></li>
+              <li><span>Fuel</span><strong id="specFuel">Petrol</strong></li>
+              <li><span>Transmission</span><strong id="specTransmission">PDK Automatic</strong></li>
+              <li><span>Body Style</span><strong id="specType">Coupe</strong></li>
+            </ul>
+
+            <div class="details-actions">
+              <button type="button" id="bookTestDriveBtn" class="btn btn-primary">Book a Test Drive &#8599;</button>
+              <button type="button" id="wishlistToggleBtn" class="btn btn-outline">&#9825; Wishlist</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description Below Main Details -->
+        <div class="details-description-box">
+          <h2>Description</h2>
+          <p id="carDescription">
+            An unmistakable icon of precision engineering, pairing a 3.6L flat-six powertrain with razor-sharp chassis balance.
+          </p>
+        </div>
+
+        <!-- Quick Monthly Installment Estimator (Logic & Calculation) -->
+        <div class="estimator-box">
+          <h3>Quick Monthly Installment Estimator (Demo)</h3>
+          <div class="estimator-controls">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="downPaymentSelect">Down Payment</label>
+              <select id="downPaymentSelect">
+                <option value="0.20">20% Down Payment</option>
+                <option value="0.30" selected>30% Down Payment</option>
+                <option value="0.40">40% Down Payment</option>
+                <option value="0.50">50% Down Payment</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="tenureSelect">Installment Period</label>
+              <select id="tenureSelect">
+                <option value="3">3 Years (36 months)</option>
+                <option value="5" selected>5 Years (60 months)</option>
+                <option value="7">7 Years (84 months)</option>
+              </select>
+            </div>
+
+            <div class="estimator-result">
+              <span>Estimated Monthly (0% Demo Markup)</span>
+              <strong id="estimatedMonthly">Rs. 1.19 Lac / mo</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="../js/cars-data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/car-details.js"></script>
+</body>
+</html>

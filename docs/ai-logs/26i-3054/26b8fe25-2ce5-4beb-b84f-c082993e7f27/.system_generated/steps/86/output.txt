@@ -1,0 +1,35 @@
+Created At: 2026-11-27T18:20:07+05:00
+Completed At: 2026-11-27T18:20:11+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                                                 
+--------                                                                                 
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\css                       
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\images                    
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\js                        
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages                     
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\index.html                
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\README.md                 
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\css\style.css             
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\js\app.js                 
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\about.html          
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\admin.html          
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\bookings.html       
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\brand-collection....
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\brands.html         
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\car-details.html    
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\compare-cars.html   
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\contact.html        
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\explore-cars.html   
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\faq.html            
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\finance-calculato...
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\inventory.html      
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\new-arrivals.html   
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\offers.html         
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\reviews.html        
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\saved-cars.html     
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors\pages\test-drive.html     
+
+

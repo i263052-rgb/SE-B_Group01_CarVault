@@ -1,0 +1,22 @@
+Created At: 2026-11-26T15:55:13+05:00
+Completed At: 2026-11-26T15:55:25+05:00
+Command exited with code 0.
+
+Command output:
+node : The term 'node' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path 
+is correct and try again.
+At line:1 char:208
++ ... e); [Console]::OutputEncoding = $OutputEncoding } catch {}; node -e "
++                                                                 ~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+ M README.md
+?? "CL1000_Final_Project (1).pdf"
+?? css/
+?? docs/
+?? images/
+?? index.html
+?? js/
+?? pages/

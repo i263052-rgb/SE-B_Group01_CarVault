@@ -1,0 +1,27 @@
+Created At: 2026-11-26T15:52:20+05:00
+Completed At: 2026-11-26T15:54:33+05:00
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\User\OneDrive\Desktop\CarVault project\images\cars
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+-a----         26-Nov-26   3:50 PM         646024 audi-a6.jpg                                      
+-a----         26-Nov-26   3:50 PM         736867 bmw-m5.jpg                                       
+-a----         26-Nov-26   3:47 PM         712948 honda-civic-main.jpg                             
+-a----         26-Nov-26   3:47 PM         736837 mercedes-c400.jpg                                
+-a----         26-Nov-26   3:47 PM         738437 toyota-prado.jpg                                 
+
+
+    Directory: C:\Users\User\OneDrive\Desktop\CarVault project\images\hero
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+-a----         26-Nov-26   3:47 PM         814835 hero-showroom.jpg                                
+
+

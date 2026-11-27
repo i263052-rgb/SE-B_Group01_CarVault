@@ -1,0 +1,12 @@
+Created At: 2026-11-27T18:00:41+05:00
+Completed At: 2026-11-27T18:00:44+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                    
+--------                                                    
+C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+C:\Program Files\Google\Chrome\Application\chrome.exe       
+
+

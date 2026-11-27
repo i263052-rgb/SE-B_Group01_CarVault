@@ -1,0 +1,60 @@
+Created At: 2026-11-26T15:34:06+05:00
+Completed At: 2026-11-26T15:34:12+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                                                           
+--------                                                                                           
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks                                         
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\applypatch-msg.sample                   
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\commit-msg.sample                       
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\fsmonitor-watchman.sample               
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\post-update.sample                      
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-applypatch.sample                   
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-commit.sample                       
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-merge-commit.sample                 
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-push.sample                         
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-rebase.sample                       
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\pre-receive.sample                      
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\prepare-commit-msg.sample               
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\push-to-checkout.sample                 
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\sendemail-validate.sample               
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\hooks\update.sample                           
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\info                                          
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\info\exclude                                  
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs                                          
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs                                     
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\heads                               
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\heads\26i3054                       
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\heads\main                          
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\remotes                             
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\remotes\origin                      
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\refs\remotes\origin\HEAD                 
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\logs\HEAD                                     
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects                                       
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects\info                                  
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects\pack                                  
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects\pack\pack-fc9cfb9cfd9af74bedeb2b428...
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects\pack\pack-fc9cfb9cfd9af74bedeb2b428...
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\objects\pack\pack-fc9cfb9cfd9af74bedeb2b428...
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs                                          
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\heads                                    
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\heads\26i3054                            
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\heads\main                               
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\remotes                                  
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\remotes\origin                           
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\remotes\origin\HEAD                      
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\refs\tags                                     
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\config                                        
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\description                                   
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\HEAD                                          
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\index                                         
+C:\Users\User\OneDrive\Desktop\CarVault project\.git\packed-refs                                   
+C:\Users\User\OneDrive\Desktop\CarVault project\index.html                                         
+C:\Users\User\OneDrive\Desktop\CarVault project\README.md                                          
+C:\Users\User\OneDrive\Desktop\CarVault project\WhatsApp Image 2026-11-26 at 3.04.55 PM.jpeg       
+C:\Users\User\OneDrive\Desktop\CarVault project\WhatsApp Image 2026-11-26 at 3.04.56 PM.jpeg       
+C:\Users\User\OneDrive\Desktop\CarVault project\WhatsApp Image 2026-11-26 at 3.04.57 PM.jpeg       
+
+

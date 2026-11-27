@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Luxury showroom cabin interior view">
+  <rect width="800" height="450" fill="#111827"/>
+  <path d="M60 330 Q400 200 740 330 L740 450 L60 450 Z" fill="#1f2937" stroke="#374151" stroke-width="3"/>
+  <rect x="330" y="195" width="160" height="82" rx="10" fill="#0b101b" stroke="#D9A441" stroke-width="3"/>
+  <text x="410" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#D9A441">DIGITAL DISPLAY</text>
+  <circle cx="220" cy="300" r="82" fill="none" stroke="#9ca3af" stroke-width="14"/>
+  <circle cx="220" cy="300" r="24" fill="#111827" stroke="#D9A441" stroke-width="4"/>
+  <rect x="40" y="34" width="185" height="30" rx="15" fill="#D9A441"/>
+  <text x="132" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#111827">CABIN INTERIOR</text>
+</svg>

@@ -1,0 +1,22 @@
+Created At: 2026-11-27T18:19:54+05:00
+Completed At: 2026-11-27T18:19:57+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                                                 
+--------                                                                                 
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website                                       
+C:\Users\User\Downloads\26I-3054_AdmitCard (1).pdf                                       
+C:\Users\User\Downloads\26I-3054_AdmitCard.pdf                                           
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website.zip                                   
+C:\Users\User\Downloads\CarVault_project_updated.zip                                     
+C:\Users\User\Downloads\APEX_MOTORS_Luxury_Website\apex-motors                           
+C:\Users\User\OneDrive\Personal Vault.lnk                                                
+C:\Users\User\OneDrive\Desktop\CarVault project                                          
+C:\Users\User\OneDrive\Desktop\Car Dealer Simulator Prologue - Early Days.url            
+C:\Users\User\OneDrive\Desktop\CarVault project.zip                                      
+C:\Users\User\OneDrive\Desktop\CarVault project\demo website                             
+C:\Users\User\OneDrive\Pictures\batmobile-concept-car-with-neon-lights_23-2151649875.avif
+
+

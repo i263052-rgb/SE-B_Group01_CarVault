@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" role="img" aria-label="CAR VAULT logo">
+  <rect width="260" height="56" rx="8" fill="#141414"/>
+  <text x="20" y="36" fill="#F5F5F5" font-family="Plus Jakarta Sans, DM Sans, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">CAR</text>
+  <path d="M114 14 L117.6 24.4 L128 28 L117.6 31.6 L114 42 L110.4 31.6 L100 28 L110.4 24.4 Z" fill="#EAB308"/>
+  <text x="142" y="36" fill="#F5F5F5" font-family="Plus Jakarta Sans, DM Sans, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">VAULT</text>
+</svg>

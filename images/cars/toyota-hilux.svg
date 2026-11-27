@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="2026 Toyota Hilux Revo pickup truck showroom illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1f2937"/><stop offset="50%" stop-color="#4b5563"/><stop offset="100%" stop-color="#374151"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="364" rx="320" ry="26" fill="#000" opacity="0.48"/>
+  <rect x="40" y="34" width="215" height="30" rx="15" fill="#D9A441"/>
+  <text x="147" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#111827">TOYOTA HILUX REVO 2026</text>
+  <path d="M100 220 H300 V156 H485 L575 210 L690 225 L694 286 H100 Z" fill="url(#body)" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M316 168 H475 L540 210 H316 Z" fill="#0b101b"/>
+  <line x1="406" y1="168" x2="406" y2="210" stroke="#4b5563" stroke-width="5"/>
+  <path d="M658 225 L688 234 L680 252 L650 244 Z" fill="#D9A441"/>
+  <circle cx="220" cy="296" r="54" fill="#0b101b" stroke="#D9A441" stroke-width="5"/>
+  <circle cx="220" cy="296" r="26" fill="#d1d5db"/>
+  <circle cx="578" cy="296" r="54" fill="#0b101b" stroke="#D9A441" stroke-width="5"/>
+  <circle cx="578" cy="296" r="26" fill="#d1d5db"/>
+</svg>

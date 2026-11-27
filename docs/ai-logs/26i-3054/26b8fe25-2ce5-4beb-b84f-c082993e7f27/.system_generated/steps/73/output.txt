@@ -1,0 +1,73 @@
+Created At: 2026-11-27T18:16:37+05:00
+Completed At: 2026-11-27T18:16:41+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                                        
+--------                                                                        
+C:\Users\User\OneDrive\Desktop\CarVault project                                 
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5                                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01                                 
+C:\Users\User\OneDrive\Desktop\.lnk                                             
+C:\Users\User\OneDrive\Desktop\Car Dealer Simulator Prologue - Early Days.url   
+C:\Users\User\OneDrive\Desktop\CarVault project.zip                             
+C:\Users\User\OneDrive\Desktop\Embarcadero Dev-C++.lnk                          
+C:\Users\User\OneDrive\Desktop\Free Fire.lnk                                    
+C:\Users\User\OneDrive\Desktop\Hamza - Chrome.lnk                               
+C:\Users\User\OneDrive\Desktop\i263054_SE_B.zip                                 
+C:\Users\User\OneDrive\Desktop\IM-Magic Partition Resizer Free.lnk              
+C:\Users\User\OneDrive\Desktop\JDownloader 2.lnk                                
+C:\Users\User\OneDrive\Desktop\CarVault project\css                             
+C:\Users\User\OneDrive\Desktop\CarVault project\demo website                    
+C:\Users\User\OneDrive\Desktop\CarVault project\docs                            
+C:\Users\User\OneDrive\Desktop\CarVault project\images                          
+C:\Users\User\OneDrive\Desktop\CarVault project\js                              
+C:\Users\User\OneDrive\Desktop\CarVault project\pages                           
+C:\Users\User\OneDrive\Desktop\CarVault project\CL1000_Final_Project (1).pdf    
+C:\Users\User\OneDrive\Desktop\CarVault project\index.html                      
+C:\Users\User\OneDrive\Desktop\CarVault project\README.md                       
+C:\Users\User\OneDrive\Desktop\CarVault project\Screenshot 2026-11-27 165326.png
+C:\Users\User\OneDrive\Desktop\CarVault project\css\common.css                  
+C:\Users\User\OneDrive\Desktop\CarVault project\css\pages.css                   
+C:\Users\User\OneDrive\Desktop\CarVault project\demo website\index.html         
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\ai-logs                    
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\feedback-photos            
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\prototype-photos           
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\documentation.md           
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\feedback-log.md            
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\testing-log.md             
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars                     
+C:\Users\User\OneDrive\Desktop\CarVault project\images\hero                     
+C:\Users\User\OneDrive\Desktop\CarVault project\images\logo                     
+C:\Users\User\OneDrive\Desktop\CarVault project\js\car-details.js               
+C:\Users\User\OneDrive\Desktop\CarVault project\js\cars-data.js                 
+C:\Users\User\OneDrive\Desktop\CarVault project\js\common.js                    
+C:\Users\User\OneDrive\Desktop\CarVault project\js\explore.js                   
+C:\Users\User\OneDrive\Desktop\CarVault project\js\home.js                      
+C:\Users\User\OneDrive\Desktop\CarVault project\pages\car-details.html          
+C:\Users\User\OneDrive\Desktop\CarVault project\pages\explore-cars.html         
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\lab5task1.cpp                    
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task1                            
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task1.png                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task2                            
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task2.cpp                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task2.png                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task3                            
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task3.cpp                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task3.png                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task4                            
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task4.cpp                        
+C:\Users\User\OneDrive\Desktop\i26-3054_B_lab5\task4.png                        
+C:\Users\User\OneDrive\Desktop\PF assignment 01\B_i26_3054.pdf                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\B_i26_3054.zip                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question01.cpp                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question01.exe                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question03.cpp                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question03.exe                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question04.cpp                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question04.exe                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question08.cpp                  
+C:\Users\User\OneDrive\Desktop\PF assignment 01\Question08.exe                  
+
+

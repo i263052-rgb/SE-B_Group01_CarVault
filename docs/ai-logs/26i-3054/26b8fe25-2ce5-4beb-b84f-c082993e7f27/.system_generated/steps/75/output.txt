@@ -1,0 +1,11 @@
+Created At: 2026-11-27T18:16:52+05:00
+Completed At: 2026-11-27T18:16:58+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                                Length
+--------                                                                ------
+C:\Users\User\OneDrive\Desktop\CarVault project\demo website\index.html    731
+
+

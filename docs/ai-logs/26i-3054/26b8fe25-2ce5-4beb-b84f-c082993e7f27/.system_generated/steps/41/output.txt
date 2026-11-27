@@ -1,0 +1,15 @@
+Created At: 2026-11-27T18:00:02+05:00
+Completed At: 2026-11-27T18:00:38+05:00
+Command exited with code 1.
+
+Command output:
+node : The term 'node' is not recognized as the name of a cmdlet, function, script file, 
+or operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+At line:1 char:122
++ ...  [Console]::OutputEncoding = $OutputEncoding } catch {}; node -v 2>$n ...
++                                                              ~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Python 3.14.7

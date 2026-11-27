@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Our Cars | CAR VAULT</title>
+  <meta name="description" content="Search, filter, and sort brand-new vehicles at CAR VAULT by brand, price range, and body type.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="explore" data-prefix="../">
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- Explore Page Header & Search Bar -->
+    <section class="explore-header">
+      <div class="container">
+        <span class="section-eyebrow">CARVAULT / THE COLLECTION</span>
+        <h1>Explore Our Cars.</h1>
+        <p class="explore-subtitle">Discover brand-new vehicles curated for craftsmanship, comfort, and performance.</p>
+
+        <div class="search-sort-bar">
+          <div class="search-input-wrap">
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+            <input
+              type="search"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search make, model, or body style..."
+              aria-label="Search for a car"
+            >
+          </div>
+
+          <select id="sortSelect" class="sort-select" aria-label="Sort cars">
+            <option value="default">Featured First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="newest">Newest First</option>
+            <option value="name-az">Name: A to Z</option>
+          </select>
+        </div>
+
+        <button
+          type="button"
+          id="mobileFilterToggle"
+          class="btn btn-navy mobile-filter-toggle"
+          aria-expanded="false"
+          aria-controls="filtersSidebar"
+        >
+          Filter Cars
+        </button>
+      </div>
+    </section>
+
+    <!-- Left Filters Sidebar + Right Car Grid -->
+    <section class="container">
+      <div class="explore-layout">
+        <aside id="filtersSidebar" class="filters-sidebar" aria-label="Car Filters">
+          <h2 class="filters-title">FILTERS</h2>
+
+          <div class="filter-group">
+            <h3>Brand</h3>
+            <label class="filter-option"><input type="checkbox" name="brand" value="Porsche"> Porsche</label>
+            <label class="filter-option"><input type="checkbox" name="brand" value="Mercedes-Benz"> Mercedes-Benz</label>
+            <label class="filter-option"><input type="checkbox" name="brand" value="BMW"> BMW</label>
+            <label class="filter-option"><input type="checkbox" name="brand" value="Audi"> Audi</label>
+            <label class="filter-option"><input type="checkbox" name="brand" value="Lamborghini"> Lamborghini</label>
+            <label class="filter-option"><input type="checkbox" name="brand" value="Range Rover"> Range Rover</label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Price</h3>
+            <label class="filter-option"><input type="checkbox" name="price" value="under-5cr"> Under PKR 5 Cr</label>
+            <label class="filter-option"><input type="checkbox" name="price" value="5cr-7cr"> PKR 5 Cr &ndash; 7 Cr</label>
+            <label class="filter-option"><input type="checkbox" name="price" value="7cr-plus"> PKR 7 Cr &amp; above</label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Body Style</h3>
+            <label class="filter-option"><input type="checkbox" name="type" value="Coupe"> Coupe</label>
+            <label class="filter-option"><input type="checkbox" name="type" value="Sedan"> Sedan</label>
+            <label class="filter-option"><input type="checkbox" name="type" value="SUV"> SUV</label>
+            <label class="filter-option"><input type="checkbox" name="type" value="Supercar"> Supercar</label>
+            <label class="filter-option"><input type="checkbox" name="type" value="Roadster"> Roadster</label>
+            <label class="filter-option"><input type="checkbox" name="type" value="Electric"> Electric</label>
+          </div>
+
+          <div class="filter-actions">
+            <button type="button" id="applyFiltersBtn" class="btn btn-primary">Apply</button>
+            <button type="button" id="resetFiltersBtn" class="btn btn-outline">Reset Filters</button>
+          </div>
+        </aside>
+
+        <div>
+          <div class="results-toolbar">
+            <span id="resultsCount">Showing 0 cars</span>
+          </div>
+
+          <div id="exploreCarsGrid" class="explore-grid">
+            <!-- Populated by js/explore.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="../js/cars-data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/explore.js"></script>
+</body>
+</html>

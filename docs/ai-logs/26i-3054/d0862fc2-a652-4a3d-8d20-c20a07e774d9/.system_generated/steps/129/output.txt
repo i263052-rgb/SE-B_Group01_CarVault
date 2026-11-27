@@ -1,0 +1,43 @@
+Created At: 2026-11-26T15:55:34+05:00
+Completed At: 2026-11-26T15:55:43+05:00
+Command exited with code 0.
+
+Command output:
+Missing assets: 0
+APEX matches: 0
+
+FullName                                                                             Length
+--------                                                                             ------
+C:\Users\User\OneDrive\Desktop\CarVault project\css\common.css                        11697
+C:\Users\User\OneDrive\Desktop\CarVault project\css\pages.css                          9541
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\documentation.md                  3513
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\feedback-log.md                   1192
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\testing-log.md                    1943
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\audi-a6.jpg              646024
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\bmw-m5.jpg               736867
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\honda-city.svg             1458
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\honda-civic-interior.svg   1131
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\honda-civic-main.jpg     712948
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\honda-civic-rear.svg       1011
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\interior-cabin.svg          927
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\kia-picanto.svg            1471
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\kia-sportage.svg           1538
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\mercedes-c400.jpg        736837
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\sedan-rear-view.svg         989
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\suv-rear-view.svg           998
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\toyota-hilux.svg           1482
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\toyota-prado.jpg         738437
+C:\Users\User\OneDrive\Desktop\CarVault project\images\cars\toyota-yaris.svg           1477
+C:\Users\User\OneDrive\Desktop\CarVault project\images\hero\hero-showroom.jpg        814835
+C:\Users\User\OneDrive\Desktop\CarVault project\images\logo\car-vault-logo.svg          582
+C:\Users\User\OneDrive\Desktop\CarVault project\js\car-details.js                      4110
+C:\Users\User\OneDrive\Desktop\CarVault project\js\cars-data.js                        6718
+C:\Users\User\OneDrive\Desktop\CarVault project\js\common.js                          19953
+C:\Users\User\OneDrive\Desktop\CarVault project\js\explore.js                          5731
+C:\Users\User\OneDrive\Desktop\CarVault project\js\home.js                             1271
+C:\Users\User\OneDrive\Desktop\CarVault project\pages\car-details.html                 4536
+C:\Users\User\OneDrive\Desktop\CarVault project\pages\explore-cars.html                4643
+C:\Users\User\OneDrive\Desktop\CarVault project\index.html                             3096
+C:\Users\User\OneDrive\Desktop\CarVault project\README.md                              3421
+
+

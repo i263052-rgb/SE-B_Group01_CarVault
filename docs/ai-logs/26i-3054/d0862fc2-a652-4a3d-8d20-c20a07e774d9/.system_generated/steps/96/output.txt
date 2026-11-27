@@ -1,0 +1,16 @@
+Created At: 2026-11-26T15:51:48+05:00
+Completed At: 2026-11-26T15:51:52+05:00
+Command exited with code 0.
+
+Command output:
+
+Name                                                  Length
+----                                                  ------
+2026_audi_a6_glacier_white_showroom_1795690245135.jpg 646024
+bmw_m5_2026_showroom_1795690246085.jpg                736867
+hero_showroom_1795690065349.jpg                       814835
+honda_civic_main_1795690079491.jpg                    712948
+mercedes_c400_1795690070481.jpg                       736837
+toyota_prado_1795690074558.jpg                        738437
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAR VAULT | Find Your Perfect Car</title>
+  <meta name="description" content="CAR VAULT — Brand-new car showroom and dealership. Explore new sedans, SUVs, hatchbacks, and pickup trucks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home" data-prefix="">
+  <!-- Shared Header & Navbar injected by js/common.js -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="home-hero">
+      <div class="container">
+        <div class="hero-header-block">
+          <span class="section-eyebrow">CARVAULT / THE COLLECTION</span>
+          <h1 class="home-hero-title">Find Your Perfect Car.</h1>
+          <p class="hero-subtitle">Explore the automotive icons crafted for performance, luxury, and everyday excellence.</p>
+        </div>
+
+        <div class="hero-banner-box">
+          <img
+            src="images/hero/hero-car.jpg"
+            alt="Porsche 911 Carrera GTS displayed inside the dark CAR VAULT showroom"
+            class="hero-banner-img"
+          >
+        </div>
+
+        <!-- Feature / Stat Boxes beneath Hero -->
+        <div class="hero-stats-row" aria-label="Showroom Highlights">
+          <div class="stat-box">
+            <strong>08+</strong>
+            <span>Curated Vehicles</span>
+          </div>
+          <div class="stat-box">
+            <strong>06</strong>
+            <span>Luxury Marques</span>
+          </div>
+          <div class="stat-box">
+            <strong>100%</strong>
+            <span>Passion Driven</span>
+          </div>
+          <div class="stat-box">
+            <strong>24/7</strong>
+            <span>Digital Showroom</span>
+          </div>
+        </div>
+
+        <!-- Full-Width Explore Cars Button -->
+        <div class="home-explore-cta-wrap">
+          <a href="pages/explore-cars.html" class="btn btn-primary home-explore-cta">
+            Explore Cars
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cars Section (2 side-by-side cards on desktop, stacked on mobile) -->
+    <section class="home-section">
+      <div class="container">
+        <div class="section-header-split">
+          <div>
+            <span class="section-eyebrow">CARVAULT / CURATED FOR YOU</span>
+            <h2 class="section-title">Featured Cars</h2>
+          </div>
+          <p class="section-header-aside">Every flagship brings its own philosophy of craftsmanship and performance.</p>
+        </div>
+        <div id="featuredCarsGrid" class="featured-grid">
+          <!-- Populated from js/cars-data.js via js/home.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Brands Quick Filter Links -->
+    <section class="home-section">
+      <div class="container">
+        <div class="section-header-split">
+          <div>
+            <span class="section-eyebrow">CARVAULT / THE MARQUES</span>
+            <h2 class="section-title">Explore Our Brands</h2>
+          </div>
+          <p class="section-header-aside">Select a marque to browse transparent pricing and showroom availability.</p>
+        </div>
+        <div id="popularBrandsStrip" class="brands-strip">
+          <!-- Populated by js/home.js; links directly to Explore Cars filtered by brand -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer injected by js/common.js -->
+  <div id="siteFooter"></div>
+
+  <script src="js/cars-data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

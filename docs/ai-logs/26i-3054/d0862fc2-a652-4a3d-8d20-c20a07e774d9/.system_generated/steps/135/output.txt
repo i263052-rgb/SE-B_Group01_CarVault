@@ -1,0 +1,11 @@
+Created At: 2026-11-26T15:57:11+05:00
+Completed At: 2026-11-26T15:57:21+05:00
+Command exited with code 0.
+
+Command output:
+
+FullName                                                             
+--------                                                             
+C:\Users\User\OneDrive\Desktop\CarVault project\docs\prototype-photos
+
+

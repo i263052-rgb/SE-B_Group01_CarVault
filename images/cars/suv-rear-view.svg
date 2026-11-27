@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="SUV rear profile view">
+  <rect width="800" height="450" fill="#111827"/>
+  <ellipse cx="400" cy="364" rx="290" ry="24" fill="#000" opacity="0.45"/>
+  <rect x="40" y="34" width="165" height="30" rx="15" fill="#D9A441"/>
+  <text x="122" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#111827">SUV REAR VIEW</text>
+  <path d="M180 295 L195 168 L260 138 H540 L605 168 L620 295 Z" fill="#4b5563" stroke="#d1d5db" stroke-width="2"/>
+  <rect x="255" y="156" width="290" height="58" rx="8" fill="#0b101b"/>
+  <rect x="200" y="228" width="76" height="28" rx="6" fill="#ef4444"/>
+  <rect x="524" y="228" width="76" height="28" rx="6" fill="#ef4444"/>
+  <rect x="350" y="248" width="100" height="24" rx="4" fill="#D9A441"/>
+  <text x="400" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#111827">CAR VAULT</text>
+</svg>

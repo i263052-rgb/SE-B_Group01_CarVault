@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="2026 Kia Sportage SUV showroom illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#9ca3af"/><stop offset="50%" stop-color="#e5e7eb"/><stop offset="100%" stop-color="#6b7280"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="360" rx="310" ry="26" fill="#000000" opacity="0.45"/>
+  <rect x="40" y="34" width="170" height="30" rx="15" fill="#D9A441"/>
+  <text x="125" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#111827">KIA SPORTAGE 2026</text>
+  <path d="M125 275 L150 220 L255 162 L495 160 L620 212 L675 232 L680 288 L120 288 Z" fill="url(#body)"/>
+  <path d="M265 174 L485 172 L575 212 L230 212 Z" fill="#111827" opacity="0.88"/>
+  <line x1="395" y1="172" x2="395" y2="212" stroke="#6b7280" stroke-width="5"/>
+  <path d="M645 224 L676 234 L668 250 L640 242 Z" fill="#D9A441"/>
+  <path d="M126 235 L154 235 L148 252 L124 252 Z" fill="#ef4444"/>
+  <circle cx="245" cy="296" r="52" fill="#0b101b" stroke="#D9A441" stroke-width="4"/>
+  <circle cx="245" cy="296" r="27" fill="#d1d5db"/>
+  <circle cx="565" cy="296" r="52" fill="#0b101b" stroke="#D9A441" stroke-width="4"/>
+  <circle cx="565" cy="296" r="27" fill="#d1d5db"/>
+</svg>

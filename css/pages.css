@@ -1,0 +1,639 @@
+/* ==========================================================================
+   CAR VAULT — Page-Specific Styles (css/pages.css)
+   Covers: Home Page, Explore Cars Page, and Car Details Page
+   Matches the Dark Obsidian & Warm Gold luxury showroom theme.
+   ========================================================================== */
+
+/* ---------- 1. HOME PAGE ---------- */
+.home-hero {
+  padding: 44px 0 36px;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.hero-header-block {
+  margin-bottom: 24px;
+}
+
+.home-hero-title {
+  font-size: clamp(2.1rem, 4.4vw, 3.25rem);
+  font-weight: 800;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 560px;
+}
+
+.hero-banner-box {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+  background-color: #0e0e0e;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+}
+
+.hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 22px auto 24px;
+  max-width: 820px;
+}
+
+.stat-box {
+  background-color: var(--bg-surface);
+  color: var(--pure-white);
+  border: 1px solid var(--border-grey);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.stat-box:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.stat-box span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-explore-cta-wrap {
+  margin-top: 10px;
+}
+
+.home-explore-cta {
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+
+.home-section {
+  padding: 46px 0 28px;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.home-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 12px;
+}
+
+.section-header-split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section-header-aside {
+  max-width: 400px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Popular Brands strip (cleanly links straight into Explore filters) */
+.brands-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.brand-pill-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-grey);
+  border-radius: var(--radius-sm);
+  padding: 20px 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.96rem;
+  letter-spacing: 0.02em;
+  color: var(--pure-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.brand-pill-card small {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.brand-pill-card:hover {
+  border-color: var(--gold);
+  background-color: var(--bg-surface-2);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.brand-pill-card:hover small {
+  color: var(--gold);
+}
+
+/* ---------- 2. EXPLORE CARS PAGE ---------- */
+.explore-header {
+  padding: 40px 0 24px;
+  border-bottom: 1px solid var(--border-grey);
+  margin-bottom: 28px;
+}
+
+.explore-header h1 {
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.explore-subtitle {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  margin-bottom: 22px;
+}
+
+.search-sort-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 13px 18px 13px 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--pure-white);
+  font-weight: 500;
+  transition: border-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.sort-select {
+  width: 220px;
+  padding: 13px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--pure-white);
+  font-weight: 600;
+}
+
+.mobile-filter-toggle {
+  display: none;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.explore-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 26px;
+  align-items: start;
+  padding-bottom: 24px;
+}
+
+.filters-sidebar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-grey);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.filters-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.filter-group {
+  margin-bottom: 18px;
+}
+
+.filter-group h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.filter-option:hover {
+  color: var(--pure-white);
+}
+
+.filter-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.filter-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.results-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.empty-state {
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.empty-state h3 {
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* ---------- 3. CAR DETAILS PAGE ---------- */
+.breadcrumb {
+  padding: 22px 0 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  color: var(--gold);
+}
+
+.details-card-shell {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-grey);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.details-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.gallery-main {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-grey);
+  background-color: #101010;
+  height: 360px;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.thumb-btn {
+  border: 2px solid var(--border-grey);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  padding: 0;
+  height: 82px;
+  background-color: #101010;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-btn.active,
+.thumb-btn:hover {
+  border-color: var(--gold);
+}
+
+.details-info h1 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.details-status {
+  display: inline-block;
+  background-color: var(--gold-soft);
+  color: var(--gold);
+  border: 1px solid rgba(234, 179, 8, 0.45);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.details-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.specs-list {
+  list-style: none;
+  border-top: 1px solid var(--border-grey);
+  margin-bottom: 22px;
+}
+
+.specs-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border-grey);
+  font-size: 0.95rem;
+}
+
+.specs-list span {
+  color: var(--text-muted);
+}
+
+.specs-list strong {
+  color: var(--pure-white);
+}
+
+.details-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.details-actions .btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.details-description-box {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-grey);
+}
+
+.details-description-box h2 {
+  font-size: 1.25rem;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.details-description-box p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+/* Monthly Installment Estimator (Logic & Calculation category) */
+.estimator-box {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-grey);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.estimator-box h3 {
+  font-size: 1rem;
+  color: var(--pure-white);
+  margin-bottom: 12px;
+}
+
+.estimator-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+.estimator-result {
+  background-color: var(--bg-surface);
+  color: var(--pure-white);
+  border: 1px solid var(--border-grey);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.estimator-result span {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.estimator-result strong {
+  font-size: 1.15rem;
+  color: var(--gold);
+}
+
+/* ---------- Responsive Media Queries ---------- */
+@media (max-width: 900px) {
+  .section-header-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-header-aside {
+    text-align: left;
+    max-width: none;
+  }
+
+  .explore-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-filter-toggle {
+    display: inline-flex;
+  }
+
+  .filters-sidebar {
+    display: none;
+  }
+
+  .filters-sidebar.open {
+    display: block;
+  }
+
+  .details-split {
+    grid-template-columns: 1fr;
+  }
+
+  .brands-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-banner-img {
+    height: 220px;
+  }
+
+  /* Match Mobile Prototype: compact hero -> Explore Cars -> Featured Cars stacked */
+  .hero-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .featured-grid,
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-sort-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+
+  .gallery-main {
+    height: 230px;
+  }
+
+  .thumb-btn {
+    height: 64px;
+  }
+
+  .estimator-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .brands-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
