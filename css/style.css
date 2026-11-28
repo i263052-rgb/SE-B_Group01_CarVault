@@ -1,0 +1,604 @@
+/* ==========================================================================
+   CarVault — Shared Luxury Showroom Stylesheet
+   Pure CSS3 designed to complement Bootstrap 5 without framework conflicts.
+   ========================================================================== */
+
+:root {
+  --cv-bg-primary: #131417;
+  --cv-bg-elevated: #191b20;
+  --cv-bg-surface: rgba(33, 37, 45, 0.65);
+  --cv-bg-surface-hover: rgba(42, 47, 58, 0.85);
+  --cv-border: rgba(255, 255, 255, 0.09);
+  --cv-border-strong: rgba(255, 255, 255, 0.16);
+  --cv-accent: #f3c852;
+  --cv-accent-hover: #fbd771;
+  --cv-accent-muted: #d9b24c;
+  --cv-text-primary: #f7f8fa;
+  --cv-text-secondary: #b5bac4;
+  --cv-text-muted: #848b98;
+  --cv-danger: #ef6461;
+  --cv-success: #46c486;
+  --cv-font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --cv-radius-sm: 2px;
+  --cv-radius-md: 4px;
+  --cv-transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.cv-body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cv-bg-primary);
+  background-image:
+    radial-gradient(ellipse 75% 45% at 62% 18%, rgba(44, 67, 98, 0.26) 0%, transparent 68%),
+    radial-gradient(ellipse 65% 40% at 35% 72%, rgba(36, 56, 84, 0.22) 0%, transparent 72%);
+  background-attachment: fixed;
+  color: var(--cv-text-primary);
+  font-family: var(--cv-font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--cv-accent);
+  outline-offset: 2px;
+}
+
+.cv-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: var(--cv-accent);
+  color: #131417;
+  font-weight: 700;
+  padding: 0.65rem 1.1rem;
+}
+
+.cv-skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* ---------- Top Announcement Bar ---------- */
+.cv-topbar {
+  background-color: #16181c;
+  border-bottom: 1px solid var(--cv-border);
+  padding: 0.45rem 1rem;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cv-text-secondary);
+}
+
+/* ---------- Shared Header & Navigation ---------- */
+.cv-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: rgba(24, 26, 31, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cv-border);
+}
+
+.cv-navbar {
+  padding: 0.65rem 0;
+}
+
+.cv-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cv-text-primary);
+  white-space: nowrap;
+}
+
+.cv-brand-logo:hover {
+  color: var(--cv-text-primary);
+}
+
+.cv-brand-star {
+  color: var(--cv-accent);
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.cv-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cv-text-secondary);
+  padding: 0.35rem 0.2rem;
+  line-height: 1.25;
+  transition: color var(--cv-transition);
+}
+
+.cv-nav-link:hover,
+.cv-nav-link:focus-visible {
+  color: var(--cv-text-primary);
+}
+
+.cv-nav-link.is-active {
+  color: var(--cv-accent);
+}
+
+.cv-saved-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  border-radius: 999px;
+  background-color: rgba(243, 200, 82, 0.16);
+  color: var(--cv-accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.cv-saved-count.is-empty {
+  display: none;
+}
+
+.cv-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background-color: var(--cv-accent);
+  color: #131417;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--cv-radius-sm);
+  border: 1px solid var(--cv-accent);
+  line-height: 1.2;
+  text-align: center;
+  transition: background-color var(--cv-transition), transform var(--cv-transition);
+  white-space: nowrap;
+}
+
+.cv-cta-btn:hover {
+  background-color: var(--cv-accent-hover);
+  color: #131417;
+  transform: translateY(-1px);
+}
+
+.cv-toggler {
+  border: 1px solid var(--cv-border-strong);
+  color: var(--cv-text-primary);
+  background: transparent;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--cv-radius-sm);
+}
+
+.cv-toggler:focus-visible {
+  box-shadow: none;
+}
+
+/* ---------- Typography Helpers ---------- */
+.cv-eyebrow {
+  display: inline-block;
+  color: var(--cv-accent-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.cv-hero-title {
+  font-size: clamp(2.35rem, 5vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--cv-text-primary);
+  margin: 0 0 0.85rem;
+}
+
+.cv-section-title {
+  font-size: clamp(1.8rem, 3.3vw, 2.55rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.14;
+  color: var(--cv-text-primary);
+  margin: 0;
+}
+
+.cv-subtitle {
+  color: var(--cv-text-secondary);
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+/* ---------- Page Sections ---------- */
+.cv-page-hero {
+  padding: 4.5rem 0 3.75rem;
+  border-bottom: 1px solid var(--cv-border);
+}
+
+.cv-section-block {
+  padding: 4rem 0 5rem;
+}
+
+/* ---------- Brand Cards (Explore Our Brands) ---------- */
+.cv-brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 3rem 1.75rem;
+  background-color: var(--cv-bg-surface);
+  border: 1px solid var(--cv-border);
+  border-radius: var(--cv-radius-sm);
+  transition:
+    background-color var(--cv-transition),
+    border-color var(--cv-transition),
+    transform var(--cv-transition),
+    box-shadow var(--cv-transition);
+}
+
+.cv-brand-card:hover,
+.cv-brand-card:focus-visible {
+  background-color: var(--cv-bg-surface-hover);
+  border-color: rgba(243, 200, 82, 0.55);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+.cv-brand-card.is-last-visited {
+  border-color: rgba(243, 200, 82, 0.42);
+}
+
+.cv-card-eyebrow {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cv-accent-muted);
+  margin-bottom: 0.95rem;
+}
+
+.cv-brand-name {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cv-text-primary);
+  margin: 0 0 0.55rem;
+}
+
+.cv-brand-count {
+  font-size: 0.86rem;
+  color: var(--cv-text-secondary);
+  margin: 0 0 1.45rem;
+}
+
+.cv-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cv-accent);
+  transition: gap var(--cv-transition), color var(--cv-transition);
+}
+
+.cv-brand-card:hover .cv-card-action {
+  gap: 0.55rem;
+  color: var(--cv-accent-hover);
+}
+
+.cv-resume-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.75rem;
+  background-color: rgba(243, 200, 82, 0.08);
+  border: 1px solid rgba(243, 200, 82, 0.3);
+  border-radius: var(--cv-radius-sm);
+  font-size: 0.85rem;
+  color: var(--cv-text-secondary);
+}
+
+.cv-resume-link {
+  color: var(--cv-accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.73rem;
+}
+
+.cv-resume-link:hover {
+  color: var(--cv-accent-hover);
+  text-decoration: underline;
+}
+
+/* ---------- Shared Buttons & Pills ---------- */
+.cv-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.62rem 1.15rem;
+  background: transparent;
+  border: 1px solid var(--cv-border-strong);
+  border-radius: var(--cv-radius-sm);
+  color: var(--cv-text-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--cv-transition), color var(--cv-transition), background-color var(--cv-transition);
+}
+
+.cv-btn-outline:hover {
+  border-color: var(--cv-accent);
+  color: var(--cv-accent);
+}
+
+/* ---------- Shared Footer ---------- */
+.cv-footer {
+  background-color: var(--cv-bg-primary);
+  border-top: 1px solid var(--cv-border);
+  padding: 4rem 0 0;
+  margin-top: auto;
+}
+
+.cv-footer-desc {
+  max-width: 310px;
+  font-size: 0.88rem;
+  color: var(--cv-text-secondary);
+  margin: 1rem 0 1.25rem;
+  line-height: 1.65;
+}
+
+.cv-footer-tagline {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cv-accent-muted);
+  margin: 0;
+}
+
+.cv-footer-heading {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cv-text-primary);
+  margin: 0 0 1.1rem;
+}
+
+.cv-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+}
+
+.cv-footer-links a {
+  font-size: 0.84rem;
+  color: var(--cv-text-secondary);
+  transition: color var(--cv-transition);
+}
+
+.cv-footer-links a:hover {
+  color: var(--cv-accent);
+}
+
+.cv-footer-bottom {
+  margin-top: 3.5rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--cv-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.76rem;
+  color: var(--cv-text-muted);
+}
+
+.cv-footer-craft {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cv-text-secondary);
+}
+
+/* ---------- Responsive Refinements ---------- */
+@media (max-width: 1399.98px) {
+  .cv-nav-list {
+    gap: 0.62rem;
+  }
+
+  .cv-nav-link {
+    font-size: 0.65rem;
+  }
+
+  .cv-cta-btn {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .cv-nav-collapse {
+    padding: 1rem 0 0.5rem;
+    border-top: 1px solid var(--cv-border);
+    margin-top: 0.75rem;
+  }
+
+  .cv-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+  }
+
+  .cv-nav-link {
+    font-size: 0.78rem;
+    padding: 0.35rem 0;
+  }
+
+  .cv-cta-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cv-topbar {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+  }
+
+  .cv-page-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .cv-section-block {
+    padding: 2.75rem 0 3.5rem;
+  }
+
+  .cv-brand-card {
+    padding: 2.25rem 1.25rem;
+  }
+}
+
+/* Brand Information Popup */
+
+.cv-modal-open {
+  overflow: hidden;
+}
+
+.cv-brand-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.cv-brand-modal.is-open {
+  display: flex;
+}
+
+.cv-brand-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  background: #171717;
+  color: #ffffff;
+  border: 1px solid #b99a55;
+  border-radius: 8px;
+}
+
+.cv-brand-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.cv-brand-modal-close:hover {
+  color: #d4af65;
+}
+
+.cv-brand-modal-tagline {
+  color: #d4af65;
+  margin: 18px 0;
+  font-size: 18px;
+}
+
+.cv-brand-modal-details {
+  color: #d4af65;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.cv-brand-modal-heading {
+  margin-top: 28px;
+  color: #d4af65;
+  font-size: 19px;
+}
+
+.cv-brand-modal-models {
+  padding-left: 20px;
+  line-height: 2;
+  color: #ffffff;
+}
+
+.cv-brand-modal-content p {
+  line-height: 1.8;
+}
+
+@media (max-width: 576px) {
+  .cv-brand-modal-content {
+    padding: 35px 22px;
+  }
+}
