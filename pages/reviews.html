@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Reviews &amp; Client Experiences | CarVault</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Base styles first, then page theme override -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/offers-theme.css" />
+    <link rel="stylesheet" href="../css/reviews-theme.css" />
+  </head>
+
+  <body>
+
+    <!-- ══════════════════════════════════════════════════
+         TOPBAR
+    ══════════════════════════════════════════════════ -->
+    <div class="topbar" role="banner">
+      THE ART OF AUTOMOTIVE EXCELLENCE &nbsp;·&nbsp; ISLAMABAD, PAKISTAN
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HEADER
+    ══════════════════════════════════════════════════ -->
+    <header class="header" role="banner">
+      <div class="nav wrap">
+
+        <!-- Logo -->
+        <a class="ov-logo" href="../index.html" aria-label="CarVault – Home">
+          CAR <span class="ov-star">✦</span> VAULT
+        </a>
+
+        <!-- Primary Nav (13 links) -->
+        <nav class="navlinks" id="navLinks" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="explore.html">Explore Cars</a>
+          <a href="brands.html">Brands</a>
+          <a href="new-arrivals.html">New Arrivals</a>
+          <a href="offers.html">Offers</a>
+          <a href="reviews.html" class="active" aria-current="page">Reviews</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="compare.html">Compare</a>
+          <a href="finance.html">Finance</a>
+          <a href="test-drive.html">Test Drive</a>
+          <a href="saved.html">Saved Cars</a>
+          <a href="admin.html">&#9825; Admin</a>
+        </nav>
+
+        <!-- CTA + mobile toggle -->
+        <div class="nav-actions" style="display:flex;align-items:center;gap:12px;">
+          <a href="test-drive.html" class="ov-cta-btn">
+            BOOK A TEST DRIVE &rarr;
+          </a>
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="navLinks"
+            aria-label="Toggle navigation menu"
+          >
+            Menu
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ══════════════════════════════════════════════
+           PAGE HERO
+      ══════════════════════════════════════════════ -->
+      <section class="rv-hero" aria-label="Reviews hero header">
+        <div class="wrap">
+          <div class="rv-eyebrow">CARVAULT / CLIENT TESTIMONIALS</div>
+          <h1>Customer Reviews</h1>
+          <p>
+            Read authentic feedback from executive buyers and rental clients across Pakistan,
+            or share your verified CarVault showroom and fleet experience.
+          </p>
+          <div class="rv-meta-chips">
+            <span class="rv-meta-chip">
+              <span class="rv-gold-star">★</span> 4.8 / 5.0 Rating Average
+            </span>
+            <span class="rv-meta-chip">
+              <span class="rv-gold-star">✦</span> 100% Transparent PKR Pricing
+            </span>
+            <span class="rv-meta-chip">
+              <span class="rv-gold-star">✓</span> Verified Showroom &amp; Rental Clients
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           MAIN SPLIT CONTENT (Reviews Feed + Form Card)
+      ══════════════════════════════════════════════ -->
+      <section class="rv-main-section" aria-label="Customer reviews and submission form">
+        <div class="wrap">
+          <div class="rv-split-layout">
+
+            <!-- ── Left Column: Customer Reviews Feed ── -->
+            <div class="rv-feed-col">
+              <div class="rv-feed-header">
+                <h2 class="rv-feed-title">
+                  Customer Reviews
+                  <span class="rv-badge-count" id="reviews-count">3</span>
+                </h2>
+                <div class="rv-feed-sort">Showing Latest Experiences</div>
+              </div>
+
+              <!-- Reviews Container (Injected & Managed via reviews.js) -->
+              <div class="rv-reviews-list" id="reviews-list" role="feed" aria-busy="false">
+                <!-- Initial 3 reviews will be populated by js/reviews.js -->
+              </div>
+            </div>
+
+            <!-- ── Right Column: Write a Review Form Card ── -->
+            <div class="rv-form-col">
+              <aside class="rv-form-panel" aria-labelledby="write-review-heading">
+                <div class="rv-form-head">
+                  <h2 id="write-review-heading">Write a Review</h2>
+                  <p>
+                    Share your experience regarding booking smoothness, PKR pricing transparency,
+                    vehicle condition, and showroom service.
+                  </p>
+                </div>
+
+                <form id="review-form" novalidate>
+                  <!-- Field 1: Name -->
+                  <div class="rv-form-group">
+                    <div class="rv-label-row">
+                      <label for="review-name" class="rv-label">Name</label>
+                      <span class="rv-required-note">Required field</span>
+                    </div>
+                    <input
+                      type="text"
+                      id="review-name"
+                      name="name"
+                      class="rv-input"
+                      placeholder="e.g. Hamza Malik"
+                      autocomplete="name"
+                      required
+                    />
+                    <div id="name-error" class="rv-inline-error" role="alert" aria-live="polite"></div>
+                  </div>
+
+                  <!-- Field 2: Rating (Interactive 5-Star Selector) -->
+                  <div class="rv-form-group">
+                    <div class="rv-label-row">
+                      <label id="rating-label" class="rv-label">Rating</label>
+                      <span class="rv-required-note">Required field</span>
+                    </div>
+
+                    <div
+                      class="rv-star-picker-container"
+                      id="star-picker-container"
+                      aria-labelledby="rating-label"
+                    >
+                      <div
+                        class="rv-stars-row"
+                        id="star-picker"
+                        role="radiogroup"
+                        aria-label="Star rating from 1 to 5 stars"
+                      >
+                        <button
+                          type="button"
+                          class="rv-star-btn"
+                          data-rating="1"
+                          role="radio"
+                          aria-checked="false"
+                          aria-label="1 star"
+                        >★</button>
+                        <button
+                          type="button"
+                          class="rv-star-btn"
+                          data-rating="2"
+                          role="radio"
+                          aria-checked="false"
+                          aria-label="2 stars"
+                        >★</button>
+                        <button
+                          type="button"
+                          class="rv-star-btn"
+                          data-rating="3"
+                          role="radio"
+                          aria-checked="false"
+                          aria-label="3 stars"
+                        >★</button>
+                        <button
+                          type="button"
+                          class="rv-star-btn"
+                          data-rating="4"
+                          role="radio"
+                          aria-checked="false"
+                          aria-label="4 stars"
+                        >★</button>
+                        <button
+                          type="button"
+                          class="rv-star-btn"
+                          data-rating="5"
+                          role="radio"
+                          aria-checked="false"
+                          aria-label="5 stars"
+                        >★</button>
+                      </div>
+                      <span id="star-label" class="rv-star-label">Select rating</span>
+                    </div>
+
+                    <input type="hidden" id="review-rating" name="rating" value="0" />
+                    <div id="rating-error" class="rv-inline-error" role="alert" aria-live="polite"></div>
+                  </div>
+
+                  <!-- Field 3: Comment -->
+                  <div class="rv-form-group">
+                    <div class="rv-label-row">
+                      <label for="review-comment" class="rv-label">Comment</label>
+                      <span class="rv-required-note">Required field</span>
+                    </div>
+                    <textarea
+                      id="review-comment"
+                      name="comment"
+                      class="rv-textarea"
+                      rows="5"
+                      placeholder="Share your thoughts on vehicle handover, condition, PKR pricing clarity, or customer support..."
+                      required
+                    ></textarea>
+                    <div id="comment-error" class="rv-inline-error" role="alert" aria-live="polite"></div>
+                  </div>
+
+                  <!-- Action Submit Button -->
+                  <button type="submit" class="rv-submit-btn" id="review-submit-btn">
+                    Submit Review &rarr;
+                  </button>
+
+                  <!-- Confirmation Success Message -->
+                  <div id="form-success-banner" class="rv-success-banner hidden" role="status" aria-live="polite">
+                    ✓ Thank you! Your review has been submitted and posted to the feed.
+                  </div>
+                </form>
+              </aside>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer class="ov-footer" role="contentinfo">
+      <div class="wrap">
+        <div class="ov-footer-grid">
+
+          <!-- Brand column -->
+          <div>
+            <div class="ov-footer-logo">
+              CAR <span class="ov-star">✦</span> VAULT
+            </div>
+            <p class="ov-footer-blurb">
+              Curated luxury vehicles, transparent PKR pricing, and flexible fleet
+              privileges across every CarVault hub in Pakistan.
+            </p>
+          </div>
+
+          <!-- Explore column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Explore</div>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore Cars</a>
+            <a href="brands.html">Brands</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+          </div>
+
+          <!-- Fleet column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Services</div>
+            <a href="offers.html">Offers</a>
+            <a href="compare.html">Compare</a>
+            <a href="finance.html">Finance</a>
+            <a href="test-drive.html">Test Drive</a>
+          </div>
+
+          <!-- Company column -->
+          <div class="ov-footer-col">
+            <div class="ov-footer-col-label">Company</div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="saved.html">Saved Cars</a>
+            <a href="admin.html">Admin</a>
+          </div>
+
+        </div>
+
+        <div class="ov-footer-bottom">
+          <span>&copy; 2026 CarVault. All rights reserved.</span>
+          <span>The Art of Automotive Excellence &middot; Islamabad, Pakistan</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/reviews.js"></script>
+  </body>
+</html>

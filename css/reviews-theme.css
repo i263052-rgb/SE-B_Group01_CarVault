@@ -1,0 +1,769 @@
+/* ============================================================
+   CarVault — Customer Reviews Theme
+   Layered on top of css/style.css
+   Theme: Exact dark obsidian / charcoal (#141517 / #1c1e21)
+          with gold accents (#eab308), dark cards (#1f2125),
+          and crisp modern typography.
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS ───────────────────────────────────────── */
+:root {
+  /* Offers Theme compatibility variables */
+  --ov-topbar-bg   : #1d1f21;
+  --ov-header-bg   : #141517;
+  --ov-gold        : #eab308;
+  --ov-gold-hover  : #fbbf24;
+  --ov-body-bg     : #191a1d;
+  --ov-body-alt    : #141517;
+  --ov-card-bg     : #1f2125;
+  --ov-card-border : #2e3238;
+  --ov-text        : #ffffff;
+  --ov-muted       : #a1a7b3;
+  --ov-border      : #2e3238;
+  --ov-footer-bg   : #141517;
+  --ov-footer-line : #2a2c30;
+
+  /* Topbar / Header */
+  --rv-topbar-bg   : #1d1f21;
+  --rv-header-bg   : #141517;
+
+  /* Gold */
+  --rv-gold        : #eab308;
+  --rv-gold-hover  : #fbbf24;
+  --rv-gold-dim    : rgba(234, 179, 8, 0.15);
+
+  /* Dark Obsidian / Charcoal Body Sections */
+  --rv-body-bg     : #191a1d;
+  --rv-body-alt    : #141517;
+  --rv-card-bg     : #1f2125;
+  --rv-card-border : #2e3238;
+  --rv-text        : #ffffff;
+  --rv-muted       : #a1a7b3;
+  --rv-border      : #2e3238;
+
+  /* Form & Validation */
+  --rv-input-bg    : #141517;
+  --rv-error       : #ef4444;
+  --rv-error-bg    : rgba(239, 68, 68, 0.12);
+  --rv-success     : #22c55e;
+  --rv-success-bg  : rgba(34, 197, 94, 0.12);
+
+  /* Hero (Dark Charcoal) */
+  --rv-hero-bg     : #16181b;
+
+  /* Footer */
+  --rv-footer-bg   : #141517;
+  --rv-footer-line : #2a2c30;
+}
+
+/* ── 2. BASE BODY ───────────────────────────────────────────── */
+body {
+  background : var(--rv-body-bg);
+  color      : var(--rv-muted);
+  font-family: 'DM Sans', sans-serif;
+  margin     : 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 3. TOPBAR ───────────────────────────────────────────────── */
+.topbar {
+  background    : var(--rv-topbar-bg) !important;
+  color         : #9ca3af !important;
+  font-size     : 11px;
+  letter-spacing: .18em;
+  padding       : 9px 16px;
+  text-align    : center;
+  text-transform: uppercase;
+  border-bottom : 1px solid #2a2c30;
+}
+
+/* ── 4. HEADER & NAV ─────────────────────────────────────────── */
+.header {
+  position       : sticky;
+  top            : 0;
+  z-index        : 50;
+  background     : var(--rv-header-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom  : 1px solid #2a2c30;
+}
+
+/* Logo: CAR ✦ VAULT with gold star */
+.ov-logo {
+  font-family    : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size      : 20px;
+  font-weight    : 800;
+  letter-spacing : .18em;
+  color          : #ffffff;
+  text-decoration: none;
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 2px;
+  white-space    : nowrap;
+  flex-shrink    : 0;
+}
+.ov-logo .ov-star {
+  color      : var(--rv-gold);
+  font-size  : 14px;
+  margin     : 0 4px;
+  line-height: 1;
+}
+
+/* 13 Nav links - Single row layout without wrapping */
+.header .nav {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  gap            : 14px;
+  flex-wrap      : nowrap;
+}
+.navlinks {
+  display        : flex;
+  align-items    : center;
+  gap            : clamp(8px, 1.15vw, 16px) !important;
+  flex-wrap      : nowrap !important;
+}
+.navlinks a {
+  color         : #cbd5e1 !important;
+  font-size     : 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition    : color .18s;
+  font-weight   : 600;
+  white-space   : nowrap !important;
+}
+.navlinks a:hover,
+.navlinks a.active {
+  color: var(--rv-gold) !important;
+}
+
+/* Gold Pill CTA */
+.ov-cta-btn {
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 6px;
+  padding        : 10px 18px;
+  background     : var(--rv-gold);
+  color          : #111315 !important;
+  border         : none;
+  border-radius  : 999px;
+  font-size      : 11px;
+  font-weight    : 800;
+  letter-spacing : .08em;
+  text-transform : uppercase;
+  text-decoration: none;
+  white-space    : nowrap;
+  transition     : background .18s, transform .18s, box-shadow .18s;
+  cursor         : pointer;
+  flex-shrink    : 0;
+}
+.ov-cta-btn:hover {
+  background : var(--rv-gold-hover);
+  transform  : translateY(-2px);
+  box-shadow : 0 4px 18px rgba(234, 179, 8, 0.35);
+  color      : #111315 !important;
+}
+
+.nav-actions {
+  flex-shrink   : 0;
+}
+
+/* Mobile menu toggle */
+#menuToggle {
+  background    : #1c1e21;
+  border        : 1px solid #2e3238;
+  color         : #cbd5e1;
+  border-radius : 6px;
+  padding       : 8px 14px;
+  font-size     : 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor        : pointer;
+}
+#menuToggle:hover {
+  border-color: var(--rv-gold);
+  color       : var(--rv-gold);
+}
+
+@media (max-width: 1200px) and (min-width: 961px) {
+  .navlinks {
+    gap: 8px !important;
+  }
+  .navlinks a {
+    font-size: 10px !important;
+    letter-spacing: .05em !important;
+  }
+  .ov-cta-btn {
+    padding: 8px 14px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .navlinks {
+    background   : #141517 !important;
+    border-bottom: 1px solid #2a2c30 !important;
+    top          : 70px !important;
+    gap          : 18px !important;
+    flex-wrap    : wrap !important;
+  }
+}
+
+/* ── 5. PAGE HERO HEADER ─────────────────────────────────────── */
+.rv-hero {
+  background   : linear-gradient(135deg, #16181b 0%, #1c1e21 100%);
+  padding      : 70px 0 55px;
+  position     : relative;
+  overflow     : hidden;
+  border-bottom: 1px solid #24272c;
+}
+.rv-hero::before {
+  content       : '';
+  position      : absolute;
+  inset         : 0;
+  background    : radial-gradient(ellipse at 85% 20%, rgba(234, 179, 8, 0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse at 15% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+.rv-hero .wrap {
+  position: relative;
+  z-index : 1;
+}
+
+.rv-eyebrow {
+  color         : var(--rv-gold);
+  font-size     : 11px;
+  font-weight   : 800;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  margin-bottom : 14px;
+}
+.rv-hero h1 {
+  font-family   : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size     : clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight   : 800;
+  color         : #ffffff;
+  letter-spacing: -.04em;
+  line-height   : 1.1;
+  margin        : 0 0 16px;
+}
+.rv-hero p {
+  color        : var(--rv-muted);
+  font-size    : 16px;
+  max-width    : 600px;
+  margin       : 0 0 24px;
+  line-height  : 1.7;
+}
+
+.rv-meta-chips {
+  display  : flex;
+  flex-wrap: wrap;
+  gap      : 12px;
+}
+.rv-meta-chip {
+  display      : inline-flex;
+  align-items  : center;
+  gap          : 7px;
+  background   : #1f2125;
+  border       : 1px solid #2e3238;
+  border-radius: 999px;
+  padding      : 6px 14px;
+  font-size    : 12px;
+  color        : #cbd5e1;
+  font-weight  : 600;
+}
+.rv-meta-chip .rv-gold-star {
+  color    : var(--rv-gold);
+  font-size: 14px;
+}
+
+/* ── 6. MAIN REVIEWS SECTION ─────────────────────────────────── */
+.rv-main-section {
+  padding   : 60px 0 90px;
+  background: var(--rv-body-bg);
+}
+
+.rv-split-layout {
+  display              : grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap                  : 36px;
+  align-items          : start;
+}
+
+/* ── 7. LEFT COLUMN — REVIEWS FEED ───────────────────────────── */
+.rv-feed-header {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin-bottom  : 24px;
+  padding-bottom : 16px;
+  border-bottom  : 1px solid #2e3238;
+}
+.rv-feed-title {
+  font-family   : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size     : 20px;
+  font-weight   : 800;
+  color         : #ffffff;
+  letter-spacing: -.02em;
+  margin        : 0;
+  display       : flex;
+  align-items   : center;
+  gap           : 10px;
+}
+.rv-badge-count {
+  display       : inline-flex;
+  align-items   : center;
+  justify-content: center;
+  background    : rgba(234, 179, 8, 0.15);
+  border        : 1px solid rgba(234, 179, 8, 0.35);
+  color         : var(--rv-gold);
+  font-size     : 11px;
+  font-weight   : 800;
+  padding       : 2px 9px;
+  border-radius : 999px;
+}
+
+.rv-feed-sort {
+  font-size: 12px;
+  color    : var(--rv-muted);
+}
+
+.rv-reviews-list {
+  display       : flex;
+  flex-direction: column;
+  gap           : 20px;
+}
+
+/* Review Card */
+.rv-card {
+  background   : var(--rv-card-bg);
+  border       : 1px solid var(--rv-card-border);
+  border-radius: 12px;
+  padding      : 26px 28px;
+  transition   : border-color .22s, box-shadow .22s, transform .22s;
+  position     : relative;
+}
+.rv-card:hover {
+  border-color: var(--rv-gold);
+  box-shadow  : 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(234, 179, 8, 0.15);
+  transform   : translateY(-3px);
+}
+.rv-card.rv-card-new {
+  animation: rvFadeIn 0.45s ease-out;
+}
+
+@keyframes rvFadeIn {
+  from {
+    opacity  : 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+}
+
+.rv-card-head {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  gap            : 16px;
+  margin-bottom  : 16px;
+}
+
+.rv-user-info {
+  display    : flex;
+  align-items: center;
+  gap        : 14px;
+}
+
+/* Circular User Avatar */
+.rv-avatar {
+  width          : 48px;
+  height         : 48px;
+  border-radius  : 50%;
+  background     : #141517;
+  border         : 2px solid var(--rv-gold);
+  color          : var(--rv-gold);
+  font-family    : 'Plus Jakarta Sans', sans-serif;
+  font-weight    : 800;
+  font-size      : 18px;
+  letter-spacing : .02em;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  flex-shrink    : 0;
+  box-shadow     : 0 2px 10px rgba(0, 0, 0, 0.35);
+  text-transform : uppercase;
+}
+
+.rv-user-meta {
+  display       : flex;
+  flex-direction: column;
+  gap           : 2px;
+}
+.rv-user-name {
+  font-family   : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size     : 17px;
+  font-weight   : 800;
+  color         : #ffffff;
+  letter-spacing: -.01em;
+  margin        : 0;
+}
+.rv-user-subtitle {
+  font-size  : 12px;
+  color      : #94a3b8;
+  font-weight: 500;
+}
+
+/* Star ratings */
+.rv-stars-container {
+  display       : flex;
+  align-items   : center;
+  gap           : 4px;
+  font-size     : 16px;
+  color         : var(--rv-gold);
+  letter-spacing: 2px;
+  line-height   : 1;
+}
+.rv-stars-container .rv-star-empty {
+  color: #4b5563;
+}
+
+.rv-card-body {
+  margin-bottom: 18px;
+}
+.rv-comment-text {
+  font-size  : 14.5px;
+  line-height: 1.68;
+  color      : #e2e8f0;
+  margin     : 0;
+}
+
+.rv-card-foot {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  border-top     : 1px solid #2a2d33;
+  padding-top    : 14px;
+  font-size      : 12px;
+  color          : #64748b;
+}
+.rv-verified-badge {
+  display    : inline-flex;
+  align-items: center;
+  gap        : 5px;
+  color      : #22c55e;
+  font-weight: 700;
+  font-size  : 11.5px;
+}
+.rv-time-tag {
+  color: #71717a;
+}
+
+/* ── 8. RIGHT COLUMN — WRITE A REVIEW FORM CARD ──────────────── */
+.rv-form-panel {
+  background   : var(--rv-card-bg);
+  border       : 1px solid var(--rv-card-border);
+  border-radius: 12px;
+  padding      : 32px 30px;
+  position     : sticky;
+  top          : 90px;
+  box-shadow   : 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+.rv-form-panel:focus-within {
+  border-color: rgba(234, 179, 8, 0.4);
+}
+
+.rv-form-head {
+  margin-bottom: 24px;
+}
+.rv-form-head h2 {
+  font-family   : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size     : 22px;
+  font-weight   : 800;
+  color         : #ffffff;
+  letter-spacing: -.02em;
+  margin        : 0 0 6px;
+}
+.rv-form-head p {
+  font-size  : 13px;
+  color      : var(--rv-muted);
+  line-height: 1.6;
+  margin     : 0;
+}
+
+/* Form Groups */
+.rv-form-group {
+  margin-bottom: 20px;
+  position     : relative;
+}
+
+.rv-label-row {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin-bottom  : 8px;
+}
+.rv-label {
+  display       : block;
+  font-size     : 12px;
+  font-weight   : 700;
+  color         : #cbd5e1;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin        : 0;
+}
+.rv-required-note {
+  font-size     : 11px;
+  font-weight   : 600;
+  color         : var(--rv-gold);
+  letter-spacing: .02em;
+}
+
+/* Form Inputs */
+.rv-input,
+.rv-textarea {
+  width        : 100%;
+  background   : var(--rv-input-bg);
+  color        : #ffffff;
+  border       : 1px solid var(--rv-border);
+  border-radius: 8px;
+  padding      : 12px 14px;
+  font-size    : 14px;
+  font-family  : 'DM Sans', sans-serif;
+  outline      : none;
+  box-sizing   : border-box;
+  transition   : border-color .18s, box-shadow .18s;
+}
+.rv-input:focus,
+.rv-textarea:focus {
+  border-color: var(--rv-gold);
+  box-shadow  : 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+.rv-input.is-invalid,
+.rv-textarea.is-invalid {
+  border-color: var(--rv-error) !important;
+  box-shadow  : 0 0 0 3px var(--rv-error-bg) !important;
+}
+
+.rv-textarea {
+  resize     : vertical;
+  min-height : 110px;
+  line-height: 1.6;
+}
+
+/* Interactive Star Picker */
+.rv-star-picker-container {
+  background   : var(--rv-input-bg);
+  border       : 1px solid var(--rv-border);
+  border-radius: 8px;
+  padding      : 12px 16px;
+  display      : flex;
+  align-items  : center;
+  justify-content: space-between;
+  gap          : 12px;
+  transition   : border-color .18s, box-shadow .18s;
+}
+.rv-star-picker-container.is-invalid {
+  border-color: var(--rv-error) !important;
+  box-shadow  : 0 0 0 3px var(--rv-error-bg) !important;
+}
+.rv-star-picker-container:focus-within {
+  border-color: var(--rv-gold);
+  box-shadow  : 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.rv-stars-row {
+  display: flex;
+  gap    : 6px;
+}
+.rv-star-btn {
+  background : transparent;
+  border     : none;
+  font-size  : 26px;
+  line-height: 1;
+  color      : #4b5563;
+  padding    : 0;
+  cursor     : pointer;
+  transition : color .15s, transform .15s;
+}
+.rv-star-btn:hover {
+  transform: scale(1.2);
+}
+.rv-star-btn.is-active,
+.rv-star-btn.is-hovered {
+  color: var(--rv-gold);
+}
+
+.rv-star-label {
+  font-size  : 12px;
+  font-weight: 700;
+  color      : var(--rv-muted);
+}
+.rv-star-label.has-rating {
+  color: var(--rv-gold);
+}
+
+/* Validation Feedback Messages */
+.rv-inline-error {
+  margin-top : 6px;
+  font-size  : 12px;
+  color      : var(--rv-error);
+  font-weight: 600;
+  display    : flex;
+  align-items: center;
+  gap        : 5px;
+  min-height : 18px;
+}
+.rv-inline-error:empty {
+  display: none;
+}
+
+/* Submit Action Button */
+.rv-submit-btn {
+  width         : 100%;
+  padding       : 14px 20px;
+  background    : var(--rv-gold);
+  color         : #111315;
+  border        : none;
+  border-radius : 8px;
+  font-size     : 13px;
+  font-weight   : 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor        : pointer;
+  transition    : background .18s, transform .18s, box-shadow .18s;
+  display       : flex;
+  align-items   : center;
+  justify-content: center;
+  gap           : 8px;
+  margin-top    : 8px;
+}
+.rv-submit-btn:hover {
+  background: var(--rv-gold-hover);
+  transform : translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 179, 8, 0.35);
+}
+.rv-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Confirmation Success Banner */
+.rv-success-banner {
+  margin-top   : 18px;
+  padding      : 14px 16px;
+  background   : var(--rv-success-bg);
+  border       : 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 8px;
+  color        : #86efac;
+  font-size    : 13px;
+  font-weight  : 600;
+  line-height  : 1.5;
+  display      : flex;
+  align-items  : center;
+  gap          : 8px;
+  animation    : rvFadeIn 0.3s ease-out;
+}
+.rv-success-banner.hidden {
+  display: none !important;
+}
+
+/* ── 9. FOOTER ───────────────────────────────────────────────── */
+.ov-footer {
+  background: var(--rv-footer-bg);
+  border-top: 1px solid var(--rv-footer-line);
+  padding   : 65px 0 24px;
+}
+.ov-footer-grid {
+  display              : grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap                  : 35px;
+}
+.ov-footer-logo {
+  font-family   : 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-size     : 20px;
+  font-weight   : 800;
+  letter-spacing: .18em;
+  color         : #ffffff;
+  display       : inline-flex;
+  align-items   : center;
+  gap           : 2px;
+  margin-bottom : 14px;
+}
+.ov-footer-logo .ov-star {
+  color    : var(--rv-gold);
+  font-size: 14px;
+  margin   : 0 4px;
+}
+.ov-footer-blurb {
+  color      : var(--rv-muted);
+  font-size  : 13px;
+  line-height: 1.7;
+  max-width  : 320px;
+}
+.ov-footer-col-label {
+  font-size     : 11px;
+  font-weight   : 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color         : var(--rv-gold);
+  margin-bottom : 14px;
+}
+.ov-footer-col a {
+  display   : block;
+  margin    : 9px 0;
+  color     : var(--rv-muted);
+  font-size : 13px;
+  transition: color .15s;
+}
+.ov-footer-col a:hover {
+  color: var(--rv-gold);
+}
+.ov-footer-bottom {
+  border-top     : 1px solid var(--rv-footer-line);
+  margin-top     : 45px;
+  padding-top    : 22px;
+  color          : #6b7280;
+  font-size      : 11px;
+  display        : flex;
+  justify-content: space-between;
+  gap            : 12px;
+  flex-wrap      : wrap;
+}
+
+/* ── 10. RESPONSIVE BREAKPOINTS ──────────────────────────────── */
+@media (max-width: 960px) {
+  .rv-split-layout {
+    grid-template-columns: 1fr;
+    gap                  : 40px;
+  }
+  .rv-form-panel {
+    position: static;
+  }
+  .ov-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .rv-hero {
+    padding: 50px 0 40px;
+  }
+  .rv-hero h1 {
+    font-size: 2.2rem;
+  }
+  .rv-card {
+    padding: 20px;
+  }
+  .rv-card-head {
+    flex-direction: column;
+    align-items   : flex-start;
+    gap           : 12px;
+  }
+  .rv-form-panel {
+    padding: 24px 18px;
+  }
+  .ov-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
